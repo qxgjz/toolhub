@@ -188,7 +188,13 @@
             {"@type":"ListItem","position":29,"name":"IP地址查询","url":"https://qxgjz.github.io/toolhub/#ipquery"},
             {"@type":"ListItem","position":30,"name":"JS压缩","url":"https://qxgjz.github.io/toolhub/#jsmin"},
             {"@type":"ListItem","position":31,"name":"命名格式转换","url":"https://qxgjz.github.io/toolhub/#caseconvert"},
-            {"@type":"ListItem","position":32,"name":"字符字节统计","url":"https://qxgjz.github.io/toolhub/#charcount"}
+            {"@type":"ListItem","position":32,"name":"字符字节统计","url":"https://qxgjz.github.io/toolhub/#charcount"},
+            {"@type":"ListItem","position":33,"name":"随机数生成器","url":"https://qxgjz.github.io/toolhub/#random"},
+            {"@type":"ListItem","position":34,"name":"天数计算器","url":"https://qxgjz.github.io/toolhub/#datediff"},
+            {"@type":"ListItem","position":35,"name":"百分比计算器","url":"https://qxgjz.github.io/toolhub/#percent"},
+            {"@type":"ListItem","position":36,"name":"图片转Base64","url":"https://qxgjz.github.io/toolhub/#img2base64"},
+            {"@type":"ListItem","position":37,"name":"摩斯电码转换","url":"https://qxgjz.github.io/toolhub/#morse"},
+            {"@type":"ListItem","position":38,"name":"科学计算器","url":"https://qxgjz.github.io/toolhub/#calculator"}
         ]
     }
     </script>
@@ -731,7 +737,7 @@
 
 <header role="banner">
     <h1>&#x1F9F0; 在线工具箱</h1>
-    <p>30+免费实用工具 - 打开即用，无需安装</p>
+    <p>38+免费实用工具 - 打开即用，无需安装</p>
     <div class="header-controls">
         <div class="search-bar" role="search">
             <input type="text" id="searchInput" placeholder="搜索工具... (按 / 快速聚焦)" oninput="filterTools()" aria-label="搜索工具" role="searchbox">
@@ -965,6 +971,42 @@
             <h3>字符字节统计</h3>
             <p>统计字符数和字节数</p>
             <span class="cat-badge">文本</span>
+        </div>
+        <div class="tool-card" onclick="showTool('random')" data-name="随机数生成 随机数字 抽号 随机抽取 号码生成" data-category="life">
+            <span class="icon">&#x1F3B2;</span>
+            <h3>随机数生成器</h3>
+            <p>生成指定范围随机数</p>
+            <span class="cat-badge">生活</span>
+        </div>
+        <div class="tool-card" onclick="showTool('datediff')" data-name="天数计算 日期计算 日期相减 日期差 天数差" data-category="life">
+            <span class="icon">&#x1F4C5;</span>
+            <h3>天数计算器</h3>
+            <p>计算两个日期间隔天数</p>
+            <span class="cat-badge">生活</span>
+        </div>
+        <div class="tool-card" onclick="showTool('percent')" data-name="百分比计算 百分比计算器 百分率 增长率 折扣计算" data-category="life">
+            <span class="icon">&#x1F4AF;</span>
+            <h3>百分比计算器</h3>
+            <p>百分比/增长率/折扣计算</p>
+            <span class="cat-badge">生活</span>
+        </div>
+        <div class="tool-card" onclick="showTool('img2base64')" data-name="图片转Base64 图片编码 Base64图片 data URI 图片转码" data-category="dev">
+            <span class="icon">&#x1F4F7;</span>
+            <h3>图片转Base64</h3>
+            <p>图片转Base64编码字符串</p>
+            <span class="cat-badge">开发</span>
+        </div>
+        <div class="tool-card" onclick="showTool('morse')" data-name="摩斯电码 摩斯密码 Morse code 电码翻译 摩斯转换" data-category="text">
+            <span class="icon">&#x1F4E9;</span>
+            <h3>摩斯电码转换</h3>
+            <p>文本与摩斯电码互转</p>
+            <span class="cat-badge">文本</span>
+        </div>
+        <div class="tool-card" onclick="showTool('calculator')" data-name="科学计算器 在线计算器 计算器 数学计算 函数计算" data-category="life">
+            <span class="icon">&#x1F9EE;</span>
+            <h3>科学计算器</h3>
+            <p>支持函数运算的科学计算器</p>
+            <span class="cat-badge">生活</span>
         </div>
     </div>
 
@@ -1824,6 +1866,170 @@
         </div>
     </div>
 
+    <!-- ==================== 随机数生成器 ==================== -->
+    <div class="tool-section" id="tool-random">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F3B2; 随机数生成器</h2>
+        <p class="desc">生成指定范围内的随机数，支持批量生成、不重复模式和抽奖抽号。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>最小值</label>
+                <input type="number" id="randMin" value="1">
+            </div>
+            <div class="input-group">
+                <label>最大值</label>
+                <input type="number" id="randMax" value="100">
+            </div>
+            <div class="input-group">
+                <label>生成数量</label>
+                <input type="number" id="randCount" value="1" min="1" max="1000">
+            </div>
+        </div>
+        <div class="input-group">
+            <label><input type="checkbox" id="randUnique" style="display:inline;width:auto;"> 不重复（去重）</label>
+        </div>
+        <button class="btn" onclick="genRandom()">&#x1F3B2; 生成随机数</button>
+        <div class="result" id="randomResult">
+            <div class="result-title">随机结果</div>
+            <div class="result-value" id="randomValue" style="font-family:var(--font-mono,monospace);font-size:1.5rem;word-break:break-all;">-</div>
+        </div>
+    </div>
+
+    <!-- ==================== 天数计算器 ==================== -->
+    <div class="tool-section" id="tool-datediff">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&x1F4C5; 天数计算器</h2>
+        <p class="desc">计算两个日期之间的天数差，支持工作日计算和日期加减。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>开始日期</label>
+                <input type="date" id="dateDiffStart">
+            </div>
+            <div class="input-group">
+                <label>结束日期</label>
+                <input type="date" id="dateDiffEnd">
+            </div>
+        </div>
+        <button class="btn" onclick="calcDateDiff()">&#x1F4C5; 计算天数</button>
+        <div class="result" id="dateDiffResult">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="dateDiffValue"></div>
+            <div class="result-detail" id="dateDiffDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 百分比计算器 ==================== -->
+    <div class="tool-section" id="tool-percent">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4AF; 百分比计算器</h2>
+        <p class="desc">计算百分比、增长率、折扣价格，三种模式一键切换。</p>
+        <div class="input-group">
+            <label>模式选择</label>
+            <select id="percentMode" onchange="switchPercentMode()" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--card-bg);color:var(--text);font-size:0.9rem;">
+                <option value="basic">求百分比（A是B的百分之几）</option>
+                <option value="growth">增长率计算（从A到B增长多少%）</option>
+                <option value="discount">折扣计算（原价A打B折）</option>
+            </select>
+        </div>
+        <div class="row" id="percentInputs">
+            <div class="input-group">
+                <label id="percentLabelA">数值A</label>
+                <input type="number" id="percentA" value="50" oninput="calcPercent()">
+            </div>
+            <div class="input-group">
+                <label id="percentLabelB">数值B</label>
+                <input type="number" id="percentB" value="200" oninput="calcPercent()">
+            </div>
+        </div>
+        <div class="result" id="percentResult" style="display:block;">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="percentValue">25%</div>
+        </div>
+    </div>
+
+    <!-- ==================== 图片转Base64 ==================== -->
+    <div class="tool-section" id="tool-img2base64">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4F7; 图片转Base64</h2>
+        <p class="desc">将图片文件转换为Base64编码字符串，支持PNG/JPG/GIF/WebP，生data URI。</p>
+        <div class="input-group">
+            <label>选择图片</label>
+            <input type="file" id="imgFile" accept="image/*" onchange="convertImgToBase64()" style="width:100%;padding:10px;border:1px dashed var(--border);border-radius:8px;background:var(--card-bg);">
+        </div>
+        <div class="result" id="imgBase64Result" style="display:none;">
+            <div class="result-title">Base64结果</div>
+            <div style="margin-top:12px;">
+                <img id="imgPreview" style="max-width:100%;border-radius:8px;border:1px solid var(--border);margin-bottom:12px;">
+            </div>
+            <div style="margin-top:8px;">
+                <label style="font-size:0.8rem;color:var(--text-light);">Data URI (<span id="base64Size">0</span> 字符):</label>
+                <textarea id="base64Output" rows="6" readonly style="width:100%;margin-top:4px;font-family:monospace;font-size:0.75rem;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);word-break:break-all;"></textarea>
+            </div>
+            <button class="btn" onclick="copyBase64()" style="margin-top:8px;">&#x1F4CB; 复制Base64</button>
+        </div>
+    </div>
+
+    <!-- ==================== 摩斯电码转换 ==================== -->
+    <div class="tool-section" id="tool-morse">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4E9; 摩斯电码转换</h2>
+        <p class="desc">文本与摩斯电码互相转换，支持中英文和数字。</p>
+        <div class="input-group">
+            <label>输入文本或摩斯电码</label>
+            <textarea id="morseInput" rows="5" placeholder="输入文本（如 HELLO）或摩斯电码（如 .... . .-.. .-.. ---）" oninput="convertMorse()"></textarea>
+        </div>
+        <div class="row">
+            <button class="btn" onclick="morseEncode()">&#x2192; 转摩斯电码</button>
+            <button class="btn" onclick="morseDecode()">&#x2190; 摩斯转文本</button>
+        </div>
+        <div class="result" id="morseResult" style="display:block;">
+            <div class="result-title">转换结果</div>
+            <div class="result-value" id="morseOutput" style="font-family:var(--font-mono,monospace);font-size:1.1rem;word-break:break-all;min-height:2em;">-</div>
+        </div>
+    </div>
+
+    <!-- ==================== 科学计算器 ==================== -->
+    <div class="tool-section" id="tool-calculator">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F9EE; 科学计算器</h2>
+        <p class="desc">支持加减乘除、三角函数、对数、幂运算等科学计算功能。</p>
+        <div class="input-group">
+            <label>计算表达式</label>
+            <input type="text" id="calcExpr" placeholder="如 2+3*4 或 sin(30)+log(100)" onkeydown="if(event.key==='Enter')calcExpr()" style="font-family:var(--font-mono,monospace);font-size:1.1rem;">
+        </div>
+        <div class="row" style="flex-wrap:wrap;gap:6px;">
+            <button class="btn" onclick="calcInput('7')" style="min-width:50px;">7</button>
+            <button class="btn" onclick="calcInput('8')" style="min-width:50px;">8</button>
+            <button class="btn" onclick="calcInput('9')" style="min-width:50px;">9</button>
+            <button class="btn" onclick="calcInput('+')" style="min-width:50px;">+</button>
+            <button class="btn" onclick="calcInput('-')" style="min-width:50px;">-</button>
+            <button class="btn" onclick="calcInput('4')" style="min-width:50px;">4</button>
+            <button class="btn" onclick="calcInput('5')" style="min-width:50px;">5</button>
+            <button class="btn" onclick="calcInput('6')" style="min-width:50px;">6</button>
+            <button class="btn" onclick="calcInput('*')" style="min-width:50px;">x</button>
+            <button class="btn" onclick="calcInput('/')" style="min-width:50px;">/</button>
+            <button class="btn" onclick="calcInput('1')" style="min-width:50px;">1</button>
+            <button class="btn" onclick="calcInput('2')" style="min-width:50px;">2</button>
+            <button class="btn" onclick="calcInput('3')" style="min-width:50px;">3</button>
+            <button class="btn" onclick="calcInput('0')" style="min-width:50px;">0</button>
+            <button class="btn" onclick="calcInput('.')" style="min-width:50px;">.</button>
+            <button class="btn" onclick="calcInput('(')" style="min-width:50px;">(</button>
+            <button class="btn" onclick="calcInput(')')" style="min-width:50px;">)</button>
+            <button class="btn" onclick="calcInput('Math.sin(')" style="min-width:50px;font-size:0.75rem;">sin</button>
+            <button class="btn" onclick="calcInput('Math.cos(')" style="min-width:50px;font-size:0.75rem;">cos</button>
+            <button class="btn" onclick="calcInput('Math.log(')" style="min-width:50px;font-size:0.75rem;">log</button>
+            <button class="btn" onclick="calcInput('Math.sqrt(')" style="min-width:50px;font-size:0.75rem;">sqrt</button>
+            <button class="btn" onclick="calcInput('**')" style="min-width:50px;">^</button>
+            <button class="btn" onclick="calcInput('Math.PI')" style="min-width:50px;font-size:0.75rem;">pi</button>
+            <button class="btn" onclick="calcClear()" style="min-width:50px;">C</button>
+            <button class="btn" onclick="calcExpr()" style="min-width:80px;background:var(--success);color:#fff;">=</button>
+        </div>
+        <div class="result" id="calcResult" style="display:block;">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="calcValue" style="font-family:var(--font-mono,monospace);font-size:1.5rem;">-</div>
+        </div>
+    </div>
+
 </main>
 
 <!-- FAQ Section -->
@@ -1879,7 +2085,7 @@
         <a href="javascript:void(0)" id="privacyLink">隐私政策</a>
         <a href="javascript:void(0)" id="termsLink">使用条款</a>
     </div>
-    <p>&copy; 2026 在线工具箱 ToolHub | 33+工具永久免费 | 数据本地处理，安全可靠</p>
+    <p>&copy; 2026 在线工具箱 ToolHub | 38+工具永久免费 | 数据本地处理，安全可靠</p>
     <p style="margin-top:4px; font-size:0.78rem; color:var(--text-light);">GitHub: <a href="https://github.com/qxgjz/toolhub" style="color:var(--primary);">qxgjz/toolhub</a></p>
 </footer>
 
@@ -1972,7 +2178,13 @@ const toolMeta = {
     ipquery: { title: 'IP地址查询 - 在线工具箱', desc: '查询IP地址类别、私有/公有、子网掩码计算、CIDR分析和可用主机数。' },
     jsmin: { title: 'JS压缩 - 在线工具箱', desc: '在线压缩JavaScript代码，移除注释和多余空格，减小JS文件体积。' },
     caseconvert: { title: '命名格式转换 - 在线工具箱', desc: '驼峰/下划线/帕斯卡/短横线/常量命名风格互相转换，camelCase snake_case PascalCase kebab-case。' },
-    charcount: { title: '字符字节统计 - 在线工具箱', desc: '统计文本字符数、UTF-8字节数、中文字符数、英文字母数和行数。' }
+    charcount: { title: '字符字节统计 - 在线工具箱', desc: '统计文本字符数、UTF-8字节数、中文字符数、英文字母数和行数。' },
+    random: { title: '随机数生成器 - 在线工具箱', desc: '在线随机数生成器，支持指定范围、批量生成、不重复模式和抽奖抽号。' },
+    datediff: { title: '天数计算器 - 在线工具箱', desc: '计算两个日期之间的天数差，支持工作日计算，免费在线天数计算工具。' },
+    percent: { title: '百分比计算器 - 在线工具箱', desc: '百分比计算器，求百分比、增长率计算、折扣价格计算，三种模式。' },
+    img2base64: { title: '图片转Base64 - 在线工具箱', desc: '将图片转换为Base64编码字符串和Data URI，支持PNG/JPG/GIF/WebP格式。' },
+    morse: { title: '摩斯电码转换 - 在线工具箱', desc: '文本与摩斯电码互相转换，支持中英文和数字，在线摩斯密码翻译工具。' },
+    calculator: { title: '科学计算器 - 在线工具箱', desc: '在线科学计算器，支持加减乘除、三角函数、对数、幂运算等数学计算。' }
 };
 
 let tsTimerId = null;
@@ -2082,7 +2294,7 @@ function showGrid() {
     document.getElementById('breadcrumb').classList.remove('show');
     renderRecent();
     if (location.hash) history.pushState({ tool: 'home' }, '', location.pathname);
-    document.title = '在线工具箱 - 33+免费实用工具合集 | ToolHub';
+    document.title = '在线工具箱 - 38+免费实用工具合集 | ToolHub';
     const descTag = document.querySelector('meta[name="description"]');
     if (descTag) descTag.setAttribute('content', '免费在线工具箱，提供JSON格式化、Base64编解码、MD5哈希、UUID生成、投资收益计算器、房贷计算器、二维码生成、密码生成等20+实用工具，全部本地运行，数据不上传，打开即用。');
     stopTsTimer();
@@ -3906,6 +4118,200 @@ function countChars() {
     document.getElementById('spaceCount').textContent = spaces;
     document.getElementById('lineCount').textContent = lines;
     document.getElementById('wordCount').textContent = words;
+}
+
+// ==================== Random Number Generator ====================
+function genRandom() {
+    var min = parseInt(document.getElementById('randMin').value) || 0;
+    var max = parseInt(document.getElementById('randMax').value) || 100;
+    var count = parseInt(document.getElementById('randCount').value) || 1;
+    var unique = document.getElementById('randUnique').checked;
+    if (min > max) { var t = min; min = max; max = t; }
+    var range = max - min + 1;
+    if (unique && count > range) {
+        document.getElementById('randomValue').textContent = '错误：不重复模式下数量不能超过范围（' + range + '）';
+        return;
+    }
+    var results = [];
+    var used = {};
+    while (results.length < count) {
+        var n = min + Math.floor(Math.random() * range);
+        if (unique) {
+            if (used[n]) continue;
+            used[n] = true;
+        }
+        results.push(n);
+    }
+    document.getElementById('randomValue').textContent = results.join(', ');
+}
+
+// ==================== Date Difference Calculator ====================
+function calcDateDiff() {
+    var startStr = document.getElementById('dateDiffStart').value;
+    var endStr = document.getElementById('dateDiffEnd').value;
+    if (!startStr || !endStr) {
+        document.getElementById('dateDiffValue').textContent = '请选择两个日期';
+        document.getElementById('dateDiffDetail').textContent = '';
+        return;
+    }
+    var start = new Date(startStr);
+    var end = new Date(endStr);
+    if (start > end) { var t = start; start = end; end = t; }
+    var diffMs = end - start;
+    var diffDays = Math.floor(diffMs / 86400000);
+    var diffWeeks = Math.floor(diffDays / 7);
+    var diffMonths = Math.floor(diffDays / 30.44);
+    var diffYears = Math.floor(diffDays / 365.25);
+    var workDays = 0;
+    var temp = new Date(start);
+    while (temp <= end) {
+        var dow = temp.getDay();
+        if (dow !== 0 && dow !== 6) workDays++;
+        temp.setDate(temp.getDate() + 1);
+    }
+    document.getElementById('dateDiffValue').textContent = diffDays.toLocaleString() + ' 天';
+    document.getElementById('dateDiffDetail').innerHTML =
+        '约 ' + diffWeeks + ' 周 | ' + diffMonths + ' 个月 | ' + diffYears + ' 年<br>' +
+        '工作日：' + workDays + ' 天（不含周末）';
+}
+
+// ==================== Percentage Calculator ====================
+function switchPercentMode() {
+    var mode = document.getElementById('percentMode').value;
+    var labelA = document.getElementById('percentLabelA');
+    var labelB = document.getElementById('percentLabelB');
+    if (mode === 'basic') {
+        labelA.textContent = '数值A（部分）';
+        labelB.textContent = '数值B（总数）';
+    } else if (mode === 'growth') {
+        labelA.textContent = '原数值（之前）';
+        labelB.textContent = '新数值（之后）';
+    } else {
+        labelA.textContent = '原价';
+        labelB.textContent = '折扣（如8表示8折）';
+    }
+    calcPercent();
+}
+
+function calcPercent() {
+    var mode = document.getElementById('percentMode').value;
+    var a = parseFloat(document.getElementById('percentA').value) || 0;
+    var b = parseFloat(document.getElementById('percentB').value) || 0;
+    var result = '';
+    if (mode === 'basic') {
+        if (b === 0) result = '错误：总数不能为0';
+        else result = ((a / b) * 100).toFixed(2) + '%';
+    } else if (mode === 'growth') {
+        if (a === 0) result = '错误：原数值不能为0';
+        else {
+            var growth = ((b - a) / Math.abs(a) * 100);
+            result = (growth >= 0 ? '+' : '') + growth.toFixed(2) + '%';
+        }
+    } else {
+        var discount = b / 10;
+        var finalPrice = a * discount;
+        var saved = a - finalPrice;
+        result = '折后价：' + finalPrice.toFixed(2) + ' 元（省 ' + saved.toFixed(2) + ' 元）';
+    }
+    document.getElementById('percentValue').textContent = result;
+}
+
+// ==================== Image to Base64 ====================
+function convertImgToBase64() {
+    var file = document.getElementById('imgFile').files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var base64 = e.target.result;
+        document.getElementById('imgPreview').src = base64;
+        document.getElementById('base64Output').value = base64;
+        document.getElementById('base64Size').textContent = base64.length.toLocaleString();
+        document.getElementById('imgBase64Result').style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+}
+
+function copyBase64() {
+    var output = document.getElementById('base64Output');
+    output.select();
+    document.execCommand('copy');
+    alert('Base64 已复制到剪贴板');
+}
+
+// ==================== Morse Code ====================
+var morseMap = {
+    'A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.','F':'..-.','G':'--.','H':'....','I':'..',
+    'J':'.---','K':'-.-','L':'.-..','M':'--','N':'-.','O':'---','P':'.--.','Q':'--.-','R':'.-.',
+    'S':'...','T':'-','U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..',
+    '0':'-----','1':'.----','2':'..---','3':'...--','4':'....-','5':'.....','6':'-....',
+    '7':'--...','8':'---..','9':'----.','.':'.-.-.-',',':'--..--','?':'..--..','/':'-..-.',
+    '-':'-....-','(':'-.--.',')':'-.--.-','=':'-...-',':':'---...',';':'-.-.-.','!':'-.-.--',
+    '@':'.--.-.'
+};
+var reverseMorse = {};
+Object.keys(morseMap).forEach(function(k) { reverseMorse[morseMap[k]] = k; });
+
+function morseEncode() {
+    var input = document.getElementById('morseInput').value.toUpperCase().trim();
+    if (!input) { document.getElementById('morseOutput').textContent = '-'; return; }
+    var result = [];
+    for (var i = 0; i < input.length; i++) {
+        var ch = input[i];
+        if (ch === ' ') { result.push('/'); continue; }
+        if (morseMap[ch]) { result.push(morseMap[ch]); }
+    }
+    document.getElementById('morseOutput').textContent = result.join(' ');
+}
+
+function morseDecode() {
+    var input = document.getElementById('morseInput').value.trim();
+    if (!input) { document.getElementById('morseOutput').textContent = '-'; return; }
+    var words = input.split(/\s*\/\s*/);
+    var result = [];
+    words.forEach(function(word, wi) {
+        var codes = word.split(/\s+/);
+        codes.forEach(function(code) {
+            code = code.trim();
+            if (!code) return;
+            if (reverseMorse[code]) result.push(reverseMorse[code]);
+        });
+        if (wi < words.length - 1) result.push(' ');
+    });
+    document.getElementById('morseOutput').textContent = result.join('') || '无法识别';
+}
+
+function convertMorse() {}
+
+// ==================== Scientific Calculator ====================
+function calcInput(val) {
+    var expr = document.getElementById('calcExpr');
+    expr.value += val;
+    expr.focus();
+}
+
+function calcClear() {
+    document.getElementById('calcExpr').value = '';
+    document.getElementById('calcValue').textContent = '-';
+}
+
+function calcExpr() {
+    var input = document.getElementById('calcExpr').value.trim();
+    if (!input) return;
+    try {
+        input = input.replace(/\^/g, '**').replace(/x/gi, '*').replace(/pi/gi, 'Math.PI');
+        if (!/^[\d+\-*/().\s,MathsinqrtolePI]+$/.test(input)) {
+            throw new Error('invalid');
+        }
+        var result = Function('"use strict"; return (' + input + ')')();
+        if (typeof result === 'number' && !isNaN(result) && isFinite(result)) {
+            var display = Number.isInteger(result) ? result.toString() : result.toFixed(10).replace(/\.?0+$/, '');
+            document.getElementById('calcValue').textContent = '= ' + display;
+        } else {
+            document.getElementById('calcValue').textContent = '错误：无法计算';
+        }
+    } catch (e) {
+        document.getElementById('calcValue').textContent = '错误：表达式无效';
+    }
 }
 
 lookupHTTP();
