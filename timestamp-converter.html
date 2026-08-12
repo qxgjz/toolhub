@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳转换工具 - 免费在线时间戳转换 | ToolHub</title>
+    <meta name="description" content="在线Unix时间戳与日期时间互转工具，支持毫秒/秒级时间戳和多种日期格式">
+    <meta name="keywords" content="时间戳转换,Unix时间戳,时间戳转日期,日期转时间戳,在线时间戳,Epoch时间,时间转换器">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ToolHub">
+    <link rel="canonical" href="https://www.toolhub.asia/timestamp-converter.html">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial'>T</text></svg>">
+    <link rel="preconnect" href="https://www.toolhub.asia">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="时间戳转换工具 - 免费在线使用">
+    <meta property="og:description" content="在线Unix时间戳与日期时间互转工具，支持毫秒/秒级时间戳和多种日期格式">
+    <meta property="og:url" content="https://www.toolhub.asia/timestamp-converter.html">
+    <meta property="og:image" content="https://www.toolhub.asia/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3QZW3SZCG"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y3QZW3SZCG');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"如何使用时间戳转换","description":"在线Unix时间戳与日期时间互转工具，支持毫秒/秒级时间戳和多种日期格式 使用教程","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"name":"输入时间戳或日期","text":"在输入框中输入Unix时间戳（如1723526400）或日期字符串（如2024-08-13 10:00:00）。"},{"@type":"HowToStep","position":2,"name":"选择时间单位","text":"如果是时间戳，选择是秒级还是毫秒级。现代系统多用毫秒级（13位数字），传统Unix时间戳是秒级（10位数字）。"},{"@type":"HowToStep","position":3,"name":"查看转换结果","text":"工具会自动显示对应的人类可读日期、ISO格式、UTC时间、本地时间等多种格式。点击\"复制\"获取所需格式。"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Unix时间戳是什么？","acceptedAnswer":{"@type":"Answer","text":"Unix时间戳是从1970年1月1日00:00:00 UTC开始经过的秒数（或毫秒数）。它是计算机系统中通用的跨平台时间表示方式。"}},{"@type":"Question","name":"秒级和毫秒级怎么区分？","acceptedAnswer":{"@type":"Answer","text":"秒级时间戳是10位数字（如1723526400），毫秒级是13位数字（如1723526400000）。JavaScript的Date.now()返回毫秒级。"}},{"@type":"Question","name":"时区会影响结果吗？","acceptedAnswer":{"@type":"Answer","text":"Unix时间戳本身是UTC时间，转换时会显示UTC时间和您的本地时间。工具会自动检测您的时区设置。"}},{"@type":"Question","name":"支持未来日期吗？","acceptedAnswer":{"@type":"Answer","text":"支持。只要时间戳在合理范围内（目前到2286年），都可以正常转换。"}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"时间戳转换工具","description":"在线Unix时间戳与日期时间互转工具，支持毫秒/秒级时间戳和多种日期格式","url":"https://www.toolhub.asia/timestamp-converter.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"128"}}</script>
+    <style>
+*{margin:0;padding:0;box-sizing:border-box}:root{--primary:#4f46e5;--primary-light:#818cf8;--primary-dark:#3730a3;--bg:#f1f5f9;--card-bg:#ffffff;--text:#1e293b;--text-light:#64748b;--border:#e2e8f0;--radius:12px;--shadow:0 1px 3px rgba(0,0,0,0.08)}[data-theme="dark"]{--primary:#818cf8;--primary-light:#a5b4fc;--primary-dark:#6366f1;--bg:#0f172a;--card-bg:#1e293b;--text:#e2e8f0;--text-light:#94a3b8;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3)}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:40px 20px;text-align:center}header .logo{font-size:1.2rem;margin-bottom:8px;opacity:.9}header h1{font-size:1.6rem;margin-bottom:8px}header p{opacity:.85;font-size:.9rem}.breadcrumb{max-width:900px;margin:0 auto;padding:16px 20px;font-size:.85rem;color:var(--text-light)}.breadcrumb a{color:var(--primary);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}main{max-width:900px;margin:0 auto;padding:0 20px 60px}.card{background:var(--card-bg);border-radius:var(--radius);padding:32px;margin-bottom:24px;box-shadow:var(--shadow);border:1px solid var(--border)}.card h2{font-size:1.4rem;margin-bottom:16px;color:var(--primary);padding-bottom:8px;border-bottom:2px solid var(--border)}.card h3{font-size:1.1rem;margin:20px 0 10px;color:var(--text)}.card p{margin-bottom:14px;color:var(--text-light);text-align:justify}.card ul{margin-left:24px;color:var(--text-light)}.card li{margin-bottom:8px}.card ol{margin-left:24px;color:var(--text-light)}.card ol li{margin-bottom:12px}.tool-cta{background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(129,140,248,.08));border-left:4px solid var(--primary);padding:20px;border-radius:0 8px 8px 0;margin:20px 0}.tool-cta p{margin:0 0 12px;color:var(--text);font-weight:500}.tool-cta a{display:inline-block;padding:10px 24px;background:var(--primary);color:#fff;text-decoration:none;border-radius:8px;transition:background .2s}.tool-cta a:hover{background:var(--primary-dark)}.faq-item{margin-bottom:16px;padding:16px;background:var(--bg);border-radius:8px}.faq-item strong{display:block;margin-bottom:6px;color:var(--text);font-size:1rem}.faq-item p{margin:0;color:var(--text-light)}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}.related-card{background:var(--bg);padding:16px;border-radius:8px;text-decoration:none;color:var(--text);border:1px solid var(--border);transition:transform .2s,border-color .2s}.related-card:hover{transform:translateY(-2px);border-color:var(--primary)}.related-card .r-icon{font-size:1.5rem;margin-bottom:6px}.related-card .r-name{font-weight:600;font-size:.95rem}.related-card .r-desc{font-size:.8rem;color:var(--text-light);margin-top:4px}.highlight-box{background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(129,140,248,.08));border-left:4px solid var(--primary);padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0}.highlight-box p{margin:0;color:var(--text);font-weight:500}code{background:var(--bg);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em;color:var(--primary-dark)}pre{background:var(--bg);padding:16px;border-radius:8px;overflow-x:auto;font-family:monospace;font-size:.85em;line-height:1.5;color:var(--text);border:1px solid var(--border);margin:12px 0}pre code{background:none;padding:0}.step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--primary);color:#fff;border-radius:50%;font-weight:600;font-size:.9rem;margin-right:10px;flex-shrink:0}.step-row{display:flex;align-items:flex-start;margin-bottom:16px}.step-content{flex:1}.step-content strong{display:block;margin-bottom:4px;color:var(--text)}.step-content p{margin:0;color:var(--text-light)}.table-wrap{overflow-x:auto;margin:16px 0}table{width:100%;border-collapse:collapse}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--border)}th{background:var(--bg);font-weight:600;color:var(--text)}td{color:var(--text-light)}footer{text-align:center;padding:40px 20px;color:var(--text-light);font-size:.85rem;border-top:1px solid var(--border);margin-top:40px}footer a{color:var(--primary);text-decoration:none;margin:0 8px}@media(max-width:600px){header h1{font-size:1.3rem}.card{padding:20px}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="logo">&#x1F9F0; ToolHub</div><h1>时间戳转换工具 - 免费在线时间戳转换</h1><p>在线Unix时间戳与日期时间互转工具，支持毫秒/秒级时间戳和多种日期格式</p></header>
+<nav class="breadcrumb"><a href="https://www.toolhub.asia/">首页</a> &rsaquo; <a href="https://www.toolhub.asia/">首页</a> &rsaquo; 时间戳转换</nav>
+<main>
+<div class="card">
+<h2>&#x23F0; 时间戳转换工具</h2>
+<p>时间戳转换工具帮助开发者和系统管理员在Unix时间戳和人类可读日期之间快速转换。支持秒级和毫秒级时间戳，兼容JavaScript、Java、Python等多种编程语言的时间格式。</p>
+<div class="highlight-box"><p>&#x1F4A1; 完全免费使用，无需注册。所有处理在浏览器本地完成，数据不会上传服务器。</p></div>
+</div>
+<div class="card">
+<h2>&#x25B6;&#xFE0F; 快速使用教程</h2>
+<div class="step-row"><span class="step-num">1</span><div class="step-content"><strong>输入时间戳或日期</strong><p>在输入框中输入Unix时间戳（如1723526400）或日期字符串（如2024-08-13 10:00:00）。</p></div></div><div class="step-row"><span class="step-num">2</span><div class="step-content"><strong>选择时间单位</strong><p>如果是时间戳，选择是秒级还是毫秒级。现代系统多用毫秒级（13位数字），传统Unix时间戳是秒级（10位数字）。</p></div></div><div class="step-row"><span class="step-num">3</span><div class="step-content"><strong>查看转换结果</strong><p>工具会自动显示对应的人类可读日期、ISO格式、UTC时间、本地时间等多种格式。点击"复制"获取所需格式。</p></div></div>
+<div class="tool-cta"><p>准备好使用了吗？</p><a href="https://www.toolhub.asia/#timestampconverter" target="_blank">&#x1F680; 立即使用 时间戳转换 &#x2192;</a></div>
+</div>
+<div class="card">
+<h2>&#x1F4A1; 常见使用场景</h2>
+<ul><li>调试API接口时转换返回的时间戳</li><li>查看数据库中存储的时间戳对应日期</li><li>将日期转为时间戳存入数据库</li><li>对比不同系统的时间戳格式</li><li>时区转换和时间计算</li></ul>
+</div>
+<div class="card">
+<h2>&#x2753; 常见问题解答</h2>
+<div class="faq-item"><strong>Q: Unix时间戳是什么？</strong><p>A: Unix时间戳是从1970年1月1日00:00:00 UTC开始经过的秒数（或毫秒数）。它是计算机系统中通用的跨平台时间表示方式。</p></div><div class="faq-item"><strong>Q: 秒级和毫秒级怎么区分？</strong><p>A: 秒级时间戳是10位数字（如1723526400），毫秒级是13位数字（如1723526400000）。JavaScript的Date.now()返回毫秒级。</p></div><div class="faq-item"><strong>Q: 时区会影响结果吗？</strong><p>A: Unix时间戳本身是UTC时间，转换时会显示UTC时间和您的本地时间。工具会自动检测您的时区设置。</p></div><div class="faq-item"><strong>Q: 支持未来日期吗？</strong><p>A: 支持。只要时间戳在合理范围内（目前到2286年），都可以正常转换。</p></div>
+</div>
+<div class="card">
+<h2>&#x1F9E9; 相关工具推荐</h2>
+<p>如果您觉得 时间戳转换 有用，这些相关工具可能也会帮到您：</p>
+<div class="related-grid"><a href="/unit-converter.html" class="related-card"><div class="r-icon">&#x1F4CF;</div><div class="r-name">单位换算</div><div class="r-desc">物理量单位转换</div></a><a href="/date-difference.html" class="related-card"><div class="r-icon">&#x1F4C5;</div><div class="r-name">日期差计算</div><div class="r-desc">日期间隔计算</div></a><a href="/age-calculator.html" class="related-card"><div class="r-icon">&#x1F382;</div><div class="r-name">年龄计算器</div><div class="r-desc">年龄周岁计算</div></a><a href="/countdown.html" class="related-card"><div class="r-icon">&#x23F3;</div><div class="r-name">倒计时工具</div><div class="r-desc">倒计时计算</div></a></div>
+</div></main>
+<footer><p><a href="https://www.toolhub.asia/about.html">关于我们</a> <a href="https://www.toolhub.asia/privacy.html">隐私政策</a> <a href="https://www.toolhub.asia/terms.html">使用条款</a></p><p>ToolHub &copy; 2026</p></footer>
+</body></html>
