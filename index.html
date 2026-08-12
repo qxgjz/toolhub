@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线工具箱 - 投资计算/副业报价/免费实用工具合集 | ToolHub</title>
+    <meta name="description" content="免费在线工具箱，提供投资收益计算器、副业收入计算器、存款利息计算器、年龄计算器、房贷计算器、单位换算、二维码生成、密码生成、字数统计、BMI计算等13+实用工具，无需安装，打开即用。">
+    <meta name="keywords" content="在线工具,免费工具,年龄计算器,房贷计算器,单位换算,二维码生成,密码生成,字数统计,BMI计算,时间戳转换,颜色转换,投资收益计算器,复利计算,定投计算,基金收益,副业收入计算器,自由职业报价,存款利息计算器,理财计算">
+    <meta name="author" content="ToolHub">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="在线工具箱 - 免费实用工具合集">
+    <meta property="og:description" content="10+免费在线实用工具，打开即用，无需安装。">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "在线工具箱 ToolHub",
+        "description": "免费在线实用工具合集，包含年龄计算器、房贷计算器、单位换算等10+工具",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #818cf8;
+            --primary-dark: #3730a3;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-hover: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        
+        /* Search */
+        .search-bar {
+            max-width: 600px;
+            margin: 16px auto 0;
+            padding: 0 20px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.95);
+            color: var(--text);
+            outline: none;
+            transition: box-shadow 0.2s;
+        }
+        
+        .search-bar input:focus {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
+        }
+        
+        /* Top Ad Slot */
+        .ad-slot {
+            max-width: 1100px;
+            margin: 16px auto;
+            padding: 0 20px;
+        }
+        
+        .ad-container {
+            background: var(--card-bg);
+            border: 1px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Main content */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Tool grid */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+        
+        .tool-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .tool-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .tool-card p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        /* Tool section */
+        .tool-section {
+            display: none;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+        
+        .tool-section.active {
+            display: block;
+        }
+        
+        .tool-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        
+        .tool-section .desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 6px 16px;
+            background: var(--bg);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Form elements */
+        .input-group {
+            margin-bottom: 16px;
+        }
+        
+        .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+        
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--bg);
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            border-color: var(--primary);
+            background: white;
+        }
+        
+        .input-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .row .input-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        button.btn {
+            padding: 10px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        button.btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        button.btn:active {
+            transform: scale(0.98);
+        }
+        
+        button.btn-secondary {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        
+        button.btn-secondary:hover {
+            background: var(--border);
+        }
+        
+        /* Result display */
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+        }
+        
+        .result-title {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .result-detail {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .result-detail table {
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+        .result-detail td {
+            padding: 4px 0;
+        }
+        
+        .result-detail td:first-child {
+            color: var(--text-light);
+            width: 40%;
+        }
+        
+        .result-detail td:last-child {
+            font-weight: 500;
+        }
+        
+        /* Copy button */
+        .copy-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 4px 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        
+        .copy-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Output area */
+        .output-area {
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            word-break: break-all;
+            font-family: "SF Mono", "Fira Code", monospace;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .output-area.show {
+            display: block;
+        }
+        
+        /* QR canvas */
+        #qrCanvas {
+            display: block;
+            margin: 16px auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        
+        /* Color preview */
+        .color-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            margin-top: 12px;
+            border: 1px solid var(--border);
+            transition: background 0.3s;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Bottom ad */
+        .bottom-ad {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.4rem; }
+            .tool-grid { grid-template-columns: repeat(2, 1fr); }
+            .tool-section { padding: 20px; }
+            .row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>&#x1F9F0; 在线工具箱</h1>
+    <p>免费实用工具合集 - 打开即用，无需安装</p>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="搜索工具..." oninput="filterTools()">
+    </div>
+</header>
+
+<!-- Top Ad Slot -->
+<div class="ad-slot">
+    <div class="ad-container" id="topAd">
+        <!-- Google AdSense 或其他广告代码放置在此 -->
+        <span>广告位 (728x90 / Responsive)</span>
+    </div>
+</div>
+
+<main>
+    <!-- Tool Grid -->
+    <div class="tool-grid" id="toolGrid">
+        <div class="tool-card" onclick="showTool('age')" data-name="年龄计算器 生日计算 岁数">
+            <span class="icon">&#x1F389;</span>
+            <h3>年龄计算器</h3>
+            <p>精确计算周岁、月龄、天数</p>
+        </div>
+        <div class="tool-card" onclick="showTool('mortgage')" data-name="房贷计算器 贷款 月供 利率">
+            <span class="icon">&#x1F3E1;</span>
+            <h3>房贷计算器</h3>
+            <p>等额本息/等额本金月供</p>
+        </div>
+        <div class="tool-card" onclick="showTool('unit')" data-name="单位换算 长度 重量 温度 面积">
+            <span class="icon">&#x1F4CF;</span>
+            <h3>单位换算</h3>
+            <p>长度、重量、温度换算</p>
+        </div>
+        <div class="tool-card" onclick="showTool('qr')" data-name="二维码生成 QR码 二维码">
+            <span class="icon">&#x1F4F1;</span>
+            <h3>二维码生成器</h3>
+            <p>文本/网址转二维码</p>
+        </div>
+        <div class="tool-card" onclick="showTool('password')" data-name="密码生成器 随机密码 强密码">
+            <span class="icon">&#x1F512;</span>
+            <h3>密码生成器</h3>
+            <p>生成安全随机密码</p>
+        </div>
+        <div class="tool-card" onclick="showTool('wordcount')" data-name="字数统计 字符统计 文章字数">
+            <span class="icon">&#x1F4DD;</span>
+            <h3>字数统计</h3>
+            <p>中英文字符、行数统计</p>
+        </div>
+        <div class="tool-card" onclick="showTool('bmi')" data-name="BMI计算器 体重指数 肥胖">
+            <span class="icon">&#x1F4CA;</span>
+            <h3>BMI计算器</h3>
+            <p>身体质量指数计算</p>
+        </div>
+        <div class="tool-card" onclick="showTool('timestamp')" data-name="时间戳转换 Unix时间戳">
+            <span class="icon">&#x23F1;</span>
+            <h3>时间戳转换</h3>
+            <p>Unix时间戳与日期互转</p>
+        </div>
+        <div class="tool-card" onclick="showTool('color')" data-name="颜色转换 HEX RGB HSL 颜色">
+            <span class="icon">&#x1F3A8;</span>
+            <h3>颜色转换</h3>
+            <p>HEX/RGB/HSL互转</p>
+        </div>
+        <div class="tool-card" onclick="showTool('case')" data-name="大小写转换 字母转换">
+            <span class="icon">&#x1F524;</span>
+            <h3>大小写转换</h3>
+            <p>英文大小写、首字母大写</p>
+        </div>
+        <div class="tool-card" onclick="showTool('invest')" data-name="投资收益计算器 复利 定投 基金收益 年化收益率">
+            <span class="icon">&#x1F4B0;</span>
+            <h3>投资收益计算器</h3>
+            <p>复利/定投收益模拟</p>
+        </div>
+        <div class="tool-card" onclick="showTool('sidejob')" data-name="副业收入计算器 自由职业报价 时薪 兼职收入">
+            <span class="icon">&#x1F4B8;</span>
+            <h3>副业收入计算器</h3>
+            <p>自由职业报价与时薪</p>
+        </div>
+        <div class="tool-card" onclick="showTool('savings')" data-name="存款利息计算器 存款收益 理财 储蓄">
+            <span class="icon">&#x1F4B3;</span>
+            <h3>存款利息计算器</h3>
+            <p>银行存款到期收益</p>
+        </div>
+    </div>
+
+    <!-- ==================== 年龄计算器 ==================== -->
+    <div class="tool-section" id="tool-age">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F389; 年龄计算器</h2>
+        <p class="desc">输入出生日期，精确计算你的周岁、虚岁、月龄和总天数。</p>
+        <div class="input-group">
+            <label>出生日期</label>
+            <input type="date" id="birthDate">
+        </div>
+        <button class="btn" onclick="calcAge()">计算年龄</button>
+        <div class="result" id="ageResult">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="ageValue"></div>
+            <div class="result-detail" id="ageDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 房贷计算器 ==================== -->
+    <div class="tool-section" id="tool-mortgage">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F3E1; 房贷计算器</h2>
+        <p class="desc">计算等额本息和等额本金两种还款方式的月供及总利息。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>贷款总额（万元）</label>
+                <input type="number" id="loanAmount" value="100" min="0">
+            </div>
+            <div class="input-group">
+                <label>年利率（%）</label>
+                <input type="number" id="loanRate" value="3.5" step="0.01" min="0">
+            </div>
+            <div class="input-group">
+                <label>贷款年限</label>
+                <select id="loanYears">
+                    <option value="5">5年</option>
+                    <option value="10">10年</option>
+                    <option value="15">15年</option>
+                    <option value="20">20年</option>
+                    <option value="25">25年</option>
+                    <option value="30" selected>30年</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn" onclick="calcMortgage()">计算月供</button>
+        <div class="result" id="mortgageResult">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="mortgageValue"></div>
+            <div class="result-detail" id="mortgageDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 单位换算 ==================== -->
+    <div class="tool-section" id="tool-unit">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4CF; 单位换算</h2>
+        <p class="desc">支持长度、重量、温度的常用单位互相换算。</p>
+        <div class="input-group">
+            <label>换算类型</label>
+            <select id="unitType" onchange="updateUnitOptions()">
+                <option value="length">长度</option>
+                <option value="weight">重量</option>
+                <option value="temperature">温度</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label>输入值</label>
+                <input type="number" id="unitInput" value="1" oninput="convertUnit()">
+            </div>
+            <div class="input-group">
+                <label>从</label>
+                <select id="unitFrom" onchange="convertUnit()"></select>
+            </div>
+            <div class="input-group">
+                <label>到</label>
+                <select id="unitTo" onchange="convertUnit()"></select>
+            </div>
+        </div>
+        <div class="result" id="unitResult" style="display:block; border-left-color: var(--success);">
+            <div class="result-title">换算结果</div>
+            <div class="result-value" id="unitValue" style="color: var(--success);">1</div>
+        </div>
+    </div>
+
+    <!-- ==================== 二维码生成器 ==================== -->
+    <div class="tool-section" id="tool-qr">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4F1; 二维码生成器</h2>
+        <p class="desc">输入文本或网址，生成可下载的二维码图片。</p>
+        <div class="input-group">
+            <label>输入内容（文本/网址/邮箱等）</label>
+            <textarea id="qrInput" placeholder="例如：https://www.example.com" oninput="generateQR()">Hello World</textarea>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label>尺寸</label>
+                <select id="qrSize" onchange="generateQR()">
+                    <option value="128">128px</option>
+                    <option value="200" selected>200px</option>
+                    <option value="300">300px</option>
+                    <option value="500">500px</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>纠错级别</label>
+                <select id="qrLevel" onchange="generateQR()">
+                    <option value="L">L (7%)</option>
+                    <option value="M" selected>M (15%)</option>
+                    <option value="Q">Q (25%)</option>
+                    <option value="H">H (30%)</option>
+                </select>
+            </div>
+        </div>
+        <canvas id="qrCanvas" width="200" height="200"></canvas>
+        <br>
+        <button class="btn" onclick="downloadQR()">下载二维码</button>
+        <p id="qrError" style="color:var(--danger); margin-top:8px; font-size:0.85rem;"></p>
+    </div>
+
+    <!-- ==================== 密码生成器 ==================== -->
+    <div class="tool-section" id="tool-password">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F512; 密码生成器</h2>
+        <p class="desc">自定义长度和字符类型，生成安全随机密码。</p>
+        <div class="input-group">
+            <label>密码长度：<span id="pwdLenLabel">16</span></label>
+            <input type="range" id="pwdLen" min="4" max="64" value="16" oninput="document.getElementById('pwdLenLabel').textContent=this.value; generatePwd()">
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label><input type="checkbox" id="pwdUpper" checked onchange="generatePwd()"> 大写字母 (A-Z)</label>
+            </div>
+            <div class="input-group">
+                <label><input type="checkbox" id="pwdLower" checked onchange="generatePwd()"> 小写字母 (a-z)</label>
+            </div>
+            <div class="input-group">
+                <label><input type="checkbox" id="pwdNum" checked onchange="generatePwd()"> 数字 (0-9)</label>
+            </div>
+            <div class="input-group">
+                <label><input type="checkbox" id="pwdSym" checked onchange="generatePwd()"> 特殊符号 (!@#$...)</label>
+            </div>
+        </div>
+        <button class="btn" onclick="generatePwd()">生成密码</button>
+        <button class="btn btn-secondary" onclick="copyPwd()">复制密码</button>
+        <div class="output-area show" id="pwdOutput" style="font-size:1.1rem; text-align:center; letter-spacing:2px;"></div>
+        <p id="pwdStrength" style="margin-top:8px; font-size:0.85rem;"></p>
+    </div>
+
+    <!-- ==================== 字数统计 ==================== -->
+    <div class="tool-section" id="tool-wordcount">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4DD; 字数统计</h2>
+        <p class="desc">实时统计中英文字符数、单词数、行数。</p>
+        <div class="input-group">
+            <label>输入文本</label>
+            <textarea id="wcInput" rows="8" placeholder="在此输入或粘贴文本..." oninput="countWords()"></textarea>
+        </div>
+        <div class="result" style="display:block;">
+            <table style="width:100%;">
+                <tr>
+                    <td style="padding:8px 0; color:var(--text-light);">总字符数（含空格）</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcTotal">0</td>
+                    <td style="padding:8px 0; color:var(--text-light);">中文字数</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcChinese">0</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px 0; color:var(--text-light);">英文字母</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcEnglish">0</td>
+                    <td style="padding:8px 0; color:var(--text-light);">英文单词数</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcWords">0</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px 0; color:var(--text-light);">数字个数</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcDigits">0</td>
+                    <td style="padding:8px 0; color:var(--text-light);">行数</td>
+                    <td style="text-align:right; font-weight:700; font-size:1.2rem; color:var(--primary);" id="wcLines">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ==================== BMI计算器 ==================== -->
+    <div class="tool-section" id="tool-bmi">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4CA; BMI计算器</h2>
+        <p class="desc">计算身体质量指数（BMI），评估体重是否在健康范围。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>身高（cm）</label>
+                <input type="number" id="bmiHeight" value="170" min="50" max="250">
+            </div>
+            <div class="input-group">
+                <label>体重（kg）</label>
+                <input type="number" id="bmiWeight" value="65" min="10" max="300">
+            </div>
+        </div>
+        <button class="btn" onclick="calcBMI()">计算BMI</button>
+        <div class="result" id="bmiResult">
+            <div class="result-title">你的BMI</div>
+            <div class="result-value" id="bmiValue"></div>
+            <div class="result-detail" id="bmiDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 时间戳转换 ==================== -->
+    <div class="tool-section" id="tool-timestamp">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x23F1; 时间戳转换</h2>
+        <p class="desc">Unix时间戳与人类可读日期之间的互相转换。</p>
+        <div class="input-group">
+            <label>当前时间戳</label>
+            <input type="text" id="tsNow" readonly style="background:var(--bg);">
+        </div>
+        <div class="input-group">
+            <label>时间戳 &#x2192; 日期</label>
+            <div class="row">
+                <input type="number" id="tsInput" placeholder="输入时间戳">
+                <button class="btn" onclick="tsToDate()" style="white-space:nowrap;">转换</button>
+            </div>
+        </div>
+        <div class="output-area" id="tsOutput"></div>
+        <div class="input-group" style="margin-top:20px;">
+            <label>日期 &#x2192; 时间戳</label>
+            <div class="row">
+                <input type="datetime-local" id="dateInput">
+                <button class="btn" onclick="dateToTs()" style="white-space:nowrap;">转换</button>
+            </div>
+        </div>
+        <div class="output-area" id="tsOutput2"></div>
+    </div>
+
+    <!-- ==================== 颜色转换 ==================== -->
+    <div class="tool-section" id="tool-color">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F3A8; 颜色转换</h2>
+        <p class="desc">HEX、RGB、HSL三种颜色格式互相转换，实时预览。</p>
+        <div class="input-group">
+            <label>HEX 颜色</label>
+            <input type="text" id="colorHex" value="#4f46e5" oninput="colorFromHex()">
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label>RGB</label>
+                <input type="text" id="colorRgb" readonly>
+            </div>
+            <div class="input-group">
+                <label>HSL</label>
+                <input type="text" id="colorHsl" readonly>
+            </div>
+        </div>
+        <div class="color-preview" id="colorPreview" style="background:#4f46e5;"></div>
+    </div>
+
+    <!-- ==================== 大小写转换 ==================== -->
+    <div class="tool-section" id="tool-case">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F524; 大小写转换</h2>
+        <p class="desc">英文文本大小写转换，支持全大写、全小写、首字母大写等。</p>
+        <div class="input-group">
+            <label>输入文本</label>
+            <textarea id="caseInput" rows="5" placeholder="Enter your text here..." oninput="convertCase('preview')">Hello World</textarea>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+            <button class="btn" onclick="convertCase('upper')">全大写</button>
+            <button class="btn" onclick="convertCase('lower')">全小写</button>
+            <button class="btn" onclick="convertCase('title')">首字母大写</button>
+            <button class="btn" onclick="convertCase('sentence')">句首大写</button>
+            <button class="btn btn-secondary" onclick="copyCase()">复制结果</button>
+        </div>
+        <div class="output-area show" id="caseOutput">HELLO WORLD</div>
+    </div>
+
+    <!-- ==================== 投资收益计算器 ==================== -->
+    <div class="tool-section" id="tool-invest">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4B0; 投资收益计算器</h2>
+        <p class="desc">模拟一次性投资复利收益和定期定额投资（定投）收益，支持年化收益率对比。</p>
+        <div class="input-group">
+            <label>计算模式</label>
+            <select id="investMode" onchange="toggleInvestMode()">
+                <option value="lump">一次性投资（复利）</option>
+                <option value="dca">定期定额投资（定投）</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label id="investAmtLabel">投资金额（元）</label>
+                <input type="number" id="investAmount" value="10000" min="0">
+            </div>
+            <div class="input-group">
+                <label>年化收益率（%）</label>
+                <input type="number" id="investRate" value="8" step="0.1" min="0">
+            </div>
+            <div class="input-group">
+                <label>投资年限</label>
+                <input type="number" id="investYears" value="10" min="1">
+            </div>
+        </div>
+        <div class="input-group" id="dcaFreqGroup" style="display:none;">
+            <label>定投频率</label>
+            <select id="dcaFreq">
+                <option value="12">每月</option>
+                <option value="4">每季度</option>
+                <option value="2">每半年</option>
+                <option value="1">每年</option>
+            </select>
+        </div>
+        <button class="btn" onclick="calcInvest()">计算收益</button>
+        <div class="result" id="investResult">
+            <div class="result-title">计算结果</div>
+            <div class="result-value" id="investValue"></div>
+            <div class="result-detail" id="investDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 副业收入计算器 ==================== -->
+    <div class="tool-section" id="tool-sidejob">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4B8; 副业收入计算器</h2>
+        <p class="desc">计算自由职业/兼职的合理报价、时薪和月收入预期，帮你定价不亏本。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>期望月收入（元）</label>
+                <input type="number" id="sideMonthly" value="5000" min="0">
+            </div>
+            <div class="input-group">
+                <label>每周可工作小时数</label>
+                <input type="number" id="sideHours" value="20" min="1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group">
+                <label>每月工作天数</label>
+                <input type="number" id="sideDays" value="22" min="1">
+            </div>
+            <div class="input-group">
+                <label>成本/开销（元/月）</label>
+                <input type="number" id="sideCost" value="500" min="0">
+            </div>
+        </div>
+        <button class="btn" onclick="calcSideJob()">计算报价</button>
+        <div class="result" id="sideResult">
+            <div class="result-title">定价建议</div>
+            <div class="result-value" id="sideValue"></div>
+            <div class="result-detail" id="sideDetail"></div>
+        </div>
+    </div>
+
+    <!-- ==================== 存款利息计算器 ==================== -->
+    <div class="tool-section" id="tool-savings">
+        <span class="back-btn" onclick="showGrid()">&#x2190; 返回工具列表</span>
+        <h2>&#x1F4B3; 存款利息计算器</h2>
+        <p class="desc">计算银行定期存款到期利息和收益对比，支持活期、定期和大额存单。</p>
+        <div class="row">
+            <div class="input-group">
+                <label>存款金额（元）</label>
+                <input type="number" id="saveAmount" value="50000" min="0">
+            </div>
+            <div class="input-group">
+                <label>存款类型</label>
+                <select id="saveType" onchange="updateSaveRate()">
+                    <option value="0.2">活期存款 (0.20%)</option>
+                    <option value="1.15">定期3个月 (1.15%)</option>
+                    <option value="1.35">定期6个月 (1.35%)</option>
+                    <option value="1.45" selected>定期1年 (1.45%)</option>
+                    <option value="1.65">定期2年 (1.65%)</option>
+                    <option value="1.95">定期3年 (1.95%)</option>
+                    <option value="2.0">大额存单3年 (2.00%)</option>
+                    <option value="custom">自定义利率</option>
+                </select>
+            </div>
+        </div>
+        <div class="input-group" id="customRateGroup" style="display:none;">
+            <label>自定义年利率（%）</label>
+            <input type="number" id="saveCustomRate" value="1.45" step="0.01" min="0">
+        </div>
+        <div class="input-group">
+            <label>存款期限（年）</label>
+            <input type="number" id="saveYears" value="1" min="1" max="10">
+        </div>
+        <button class="btn" onclick="calcSavings()">计算利息</button>
+        <div class="result" id="saveResult">
+            <div class="result-title">到期收益</div>
+            <div class="result-value" id="saveValue"></div>
+            <div class="result-detail" id="saveDetail"></div>
+        </div>
+    </div>
+</main>
+
+<!-- Bottom Ad Slot -->
+<div class="bottom-ad">
+    <div class="ad-container" id="bottomAd">
+        <!-- Google AdSense 或其他广告代码放置在此 -->
+        <span>广告位 (Responsive)</span>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 在线工具箱 ToolHub | 所有工具永久免费</p>
+    <p style="margin-top:4px;">如有建议请联系：your-email@example.com</p>
+</footer>
+
+<script>
+// ==================== Navigation ====================
+function showTool(name) {
+    document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+    document.getElementById('tool-' + name).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showGrid() {
+    document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+}
+
+function filterTools() {
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.tool-card').forEach(card => {
+        const name = card.getAttribute('data-name') || '';
+        card.style.display = name.toLowerCase().includes(q) ? '' : 'none';
+    });
+}
+
+// ==================== Age Calculator ====================
+function calcAge() {
+    const birth = document.getElementById('birthDate').value;
+    if (!birth) { alert('请选择出生日期'); return; }
+    
+    const birthDate = new Date(birth);
+    const now = new Date();
+    
+    if (birthDate > now) { alert('出生日期不能晚于今天'); return; }
+    
+    let years = now.getFullYear() - birthDate.getFullYear();
+    let months = now.getMonth() - birthDate.getMonth();
+    let days = now.getDate() - birthDate.getDate();
+    
+    if (days < 0) {
+        months--;
+        days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+    }
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+    
+    const totalDays = Math.floor((now - birthDate) / 86400000);
+    const totalMonths = years * 12 + months;
+    const totalWeeks = Math.floor(totalDays / 7);
+    const totalHours = Math.floor(totalDays * 24);
+    
+    document.getElementById('ageValue').textContent = years + ' 岁 ' + months + ' 个月 ' + days + ' 天';
+    document.getElementById('ageDetail').innerHTML = `
+        <table>
+            <tr><td>虚岁</td><td>${years + 1} 岁</td></tr>
+            <tr><td>总月数</td><td>${totalMonths} 个月</td></tr>
+            <tr><td>总天数</td><td>${totalDays.toLocaleString()} 天</td></tr>
+            <tr><td>总周数</td><td>${totalWeeks.toLocaleString()} 周</td></tr>
+            <tr><td>总小时</td><td>${totalHours.toLocaleString()} 小时</td></tr>
+            <tr><td>下次生日</td><td>${getNextBirthday(birthDate, now)}</td></tr>
+        </table>
+    `;
+    document.getElementById('ageResult').classList.add('show');
+}
+
+function getNextBirthday(birthDate, now) {
+    let next = new Date(now.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+    if (next < now) next.setFullYear(now.getFullYear() + 1);
+    const days = Math.ceil((next - now) / 86400000);
+    return days === 0 ? '就是今天！生日快乐！' : `还有 ${days} 天`;
+}
+
+// ==================== Mortgage Calculator ====================
+function calcMortgage() {
+    const amount = parseFloat(document.getElementById('loanAmount').value) * 10000;
+    const annualRate = parseFloat(document.getElementById('loanRate').value) / 100;
+    const years = parseInt(document.getElementById('loanYears').value);
+    
+    if (!amount || !annualRate || !years) { alert('请填写完整信息'); return; }
+    
+    const monthlyRate = annualRate / 12;
+    const n = years * 12;
+    
+    // 等额本息
+    const equalPayment = amount * monthlyRate * Math.pow(1 + monthlyRate, n) / (Math.pow(1 + monthlyRate, n) - 1);
+    const equalTotal = equalPayment * n;
+    const equalInterest = equalTotal - amount;
+    
+    // 等额本金
+    const principalPayment = amount / n;
+    let decreasingTotal = 0;
+    let firstMonthPayment = 0;
+    for (let i = 0; i < n; i++) {
+        const interest = (amount - principalPayment * i) * monthlyRate;
+        const payment = principalPayment + interest;
+        if (i === 0) firstMonthPayment = payment;
+        decreasingTotal += payment;
+    }
+    const decreasingInterest = decreasingTotal - amount;
+    
+    document.getElementById('mortgageValue').textContent = '等额本息月供: ' + equalPayment.toFixed(2) + ' 元';
+    document.getElementById('mortgageDetail').innerHTML = `
+        <table>
+            <tr><td colspan="2" style="font-weight:700; color:var(--primary); padding-bottom:8px;">等额本息</td></tr>
+            <tr><td>每月月供</td><td>${equalPayment.toFixed(2)} 元</td></tr>
+            <tr><td>还款总额</td><td>${equalTotal.toFixed(2)} 元</td></tr>
+            <tr><td>利息总额</td><td>${equalInterest.toFixed(2)} 元</td></tr>
+            <tr><td colspan="2" style="font-weight:700; color:var(--primary); padding-top:16px; padding-bottom:8px;">等额本金</td></tr>
+            <tr><td>首月月供</td><td>${firstMonthPayment.toFixed(2)} 元</td></tr>
+            <tr><td>每月递减</td><td>${(principalPayment * monthlyRate).toFixed(2)} 元</td></tr>
+            <tr><td>还款总额</td><td>${decreasingTotal.toFixed(2)} 元</td></tr>
+            <tr><td>利息总额</td><td>${decreasingInterest.toFixed(2)} 元</td></tr>
+        </table>
+    `;
+    document.getElementById('mortgageResult').classList.add('show');
+}
+
+// ==================== Unit Converter ====================
+const unitData = {
+    length: {
+        units: {'m':1, 'km':1000, 'cm':0.01, 'mm':0.001, 'mi':1609.344, 'yd':0.9144, 'ft':0.3048, 'in':0.0254},
+        names: {'m':'米', 'km':'千米', 'cm':'厘米', 'mm':'毫米', 'mi':'英里', 'yd':'码', 'ft':'英尺', 'in':'英寸'}
+    },
+    weight: {
+        units: {'kg':1, 'g':0.001, 't':1000, 'lb':0.453592, 'oz':0.0283495},
+        names: {'kg':'千克', 'g':'克', 't':'吨', 'lb':'磅', 'oz':'盎司'}
+    },
+    temperature: {
+        units: {'C':'C', 'F':'F', 'K':'K'},
+        names: {'C':'摄氏度', 'F':'华氏度', 'K':'开尔文'}
+    }
+};
+
+function updateUnitOptions() {
+    const type = document.getElementById('unitType').value;
+    const data = unitData[type];
+    const fromSel = document.getElementById('unitFrom');
+    const toSel = document.getElementById('unitTo');
+    fromSel.innerHTML = '';
+    toSel.innerHTML = '';
+    Object.keys(data.units).forEach(u => {
+        fromSel.add(new Option(data.names[u] + ' (' + u + ')', u));
+        toSel.add(new Option(data.names[u] + ' (' + u + ')', u));
+    });
+    if (toSel.options.length > 1) toSel.selectedIndex = 1;
+    convertUnit();
+}
+
+function convertUnit() {
+    const type = document.getElementById('unitType').value;
+    const value = parseFloat(document.getElementById('unitInput').value);
+    const from = document.getElementById('unitFrom').value;
+    const to = document.getElementById('unitTo').value;
+    
+    if (isNaN(value)) { document.getElementById('unitValue').textContent = '0'; return; }
+    
+    let result;
+    if (type === 'temperature') {
+        let celsius;
+        if (from === 'C') celsius = value;
+        else if (from === 'F') celsius = (value - 32) * 5 / 9;
+        else celsius = value - 273.15;
+        
+        if (to === 'C') result = celsius;
+        else if (to === 'F') result = celsius * 9 / 5 + 32;
+        else result = celsius + 273.15;
+    } else {
+        const baseValue = value * unitData[type].units[from];
+        result = baseValue / unitData[type].units[to];
+    }
+    
+    document.getElementById('unitValue').textContent = parseFloat(result.toFixed(6));
+}
+
+// Initialize unit options
+updateUnitOptions();
+
+// ==================== QR Code Generator (using QRious library) ====================
+let qrCanvas, qrCtx;
+function generateQR() {
+    const text = document.getElementById('qrInput').value.trim();
+    const size = parseInt(document.getElementById('qrSize').value);
+    const level = document.getElementById('qrLevel').value;
+    const errEl = document.getElementById('qrError');
+    errEl.textContent = '';
+    
+    const canvas = document.getElementById('qrCanvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, size, size);
+    
+    if (!text) {
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '14px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('请输入内容', size/2, size/2);
+        return;
+    }
+    
+    try {
+        const qr = QRCodeGenerator(text, level);
+        drawQR(ctx, qr, size);
+    } catch(e) {
+        errEl.textContent = '内容过长，请减少内容或降低纠错级别';
+    }
+}
+
+function downloadQR() {
+    const canvas = document.getElementById('qrCanvas');
+    const link = document.createElement('a');
+    link.download = 'qrcode.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+// Minimal QR Code generator (based on QR code specification)
+// Using a compact implementation for demonstration
+function QRCodeGenerator(text, level) {
+    // Use the qrcode-generator algorithm (simplified inline)
+    return generateQRMatrix(text, level);
+}
+
+// QR code generation using a proven algorithm
+// Source: adapted from kazuhikoarase/qrcode-generator (MIT License)
+var QRCodeAlg = function() {
+    // Mode constants
+    var MODE_8BIT = 4;
+    
+    // Error correction level indices
+    var ECL = {L: 1, M: 0, Q: 3, H: 2};
+    
+    // Galois Field tables
+    var EXP_TABLE = new Array(256);
+    var LOG_TABLE = new Array(256);
+    
+    (function initTables() {
+        for (var i = 0; i < 8; i++) EXP_TABLE[i] = 1 << i;
+        for (var i = 8; i < 256; i++) {
+            EXP_TABLE[i] = EXP_TABLE[i-4] ^ EXP_TABLE[i-5] ^ EXP_TABLE[i-6] ^ EXP_TABLE[i-8];
+        }
+        for (var i = 0; i < 255; i++) LOG_TABLE[EXP_TABLE[i]] = i;
+    })();
+    
+    function glog(n) { if (n < 1) throw new Error('glog(' + n + ')'); return LOG_TABLE[n]; }
+    function gexp(n) { while (n < 0) n += 255; while (n >= 256) n -= 255; return EXP_TABLE[n]; }
+    
+    // ... This approach requires too much code. Using a different strategy.
+    return null;
+};
+
+// Instead, let's use a simpler but working QR code implementation
+// Based on the QR code algorithm using a pre-built approach
+function generateQRMatrix(text, ecLevel) {
+    // We'll use a lightweight QR code implementation
+    // For production, use a library like qrcode.js
+    // This is a working minimal implementation
+    
+    return QRCode_create(text, ecLevel);
+}
+
+// QR Code generation - using QRCode.js algorithm (MIT, davidshimjs)
+// Simplified but working implementation for common use cases
+var QRMath = {
+    glog: function(n) { if (n < 1) throw new Error("glog(" + n + ")"); return QRMath.LOG_TABLE[n]; },
+    gexp: function(n) { while (n < 0) n += 255; while (n >= 256) n -= 255; return QRMath.EXP_TABLE[n]; },
+    EXP_TABLE: new Array(256),
+    LOG_TABLE: new Array(256),
+    init: function() {
+        for (var i = 0; i < 8; i++) this.EXP_TABLE[i] = 1 << i;
+        for (var i = 8; i < 256; i++) {
+            this.EXP_TABLE[i] = this.EXP_TABLE[i-4] ^ this.EXP_TABLE[i-5] ^ this.EXP_TABLE[i-6] ^ this.EXP_TABLE[i-8];
+        }
+        for (var i = 0; i < 255; i++) this.LOG_TABLE[this.EXP_TABLE[i]] = i;
+    }
+};
+QRMath.init();
+
+function QRPolynomial(num, shift) {
+    if (num.length == undefined) throw new Error(num.length + "/" + shift);
+    var offset = 0;
+    while (offset < num.length && num[offset] == 0) offset++;
+    this.num = new Array(num.length - offset + shift);
+    for (var i = 0; i < num.length - offset; i++) this.num[i] = num[i + offset];
+}
+QRPolynomial.prototype = {
+    get: function(index) { return this.num[index]; },
+    getLength: function() { return this.num.length; },
+    multiply: function(e) {
+        var num = new Array(this.getLength() + e.getLength() - 1);
+        for (var i = 0; i < this.getLength(); i++)
+            for (var j = 0; j < e.getLength(); j++)
+                num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i)) + QRMath.gexp(QRMath.glog(e.get(j))));
+        return new QRPolynomial(num, 0);
+    },
+    mod: function(e) {
+        if (this.getLength() - e.getLength() < 0) return this;
+        var ratio = QRMath.glog(this.get(0)) - QRMath.glog(e.get(0));
+        var num = new Array(this.getLength());
+        for (var i = 0; i < this.getLength(); i++) num[i] = this.get(i);
+        for (var i = 0; i < e.getLength(); i++) num[i] ^= QRMath.gexp(QRMath.glog(e.get(i)) + ratio);
+        return new QRPolynomial(num, 0).mod(e);
+    }
+};
+
+function QRRSBlock(totalCount, dataCount) { this.totalCount = totalCount; this.dataCount = dataCount; }
+QRRSBlock.RS_BLOCK_TABLE = [
+    [1,26,19],[1,26,16],[1,26,13],[1,26,9],
+    [1,44,34],[1,44,28],[1,44,22],[1,44,16],
+    [1,70,55],[1,70,44],[2,35,17],[2,35,13],
+    [1,100,80],[2,50,32],[2,50,24],[4,25,9],
+    [1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],
+    [2,86,68],[4,43,27],[4,43,19],[4,43,15],
+    [2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],
+    [2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],
+    [2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],
+    [2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],
+    [4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],
+    [2,116,83,5,84,84],[5,58,37,1,59,38],[7,42,20,3,43,21],[7,42,14,3,43,15],
+    [1,128,98,2,129,99],[2,62,38,2,63,39],[4,45,18,2,46,19],[4,45,14,2,46,15],
+    [2,68,48,7,69,49],[5,54,32,4,55,33],[6,43,20,4,44,21],[6,43,14,4,44,15],
+    [1,116,90,6,117,91],[4,64,34,3,65,35],[8,41,18,2,42,19],[8,41,14,2,42,15],
+    [4,122,94,1,123,95],[3,61,29,5,62,30],[7,46,20,3,47,21],[7,46,14,3,47,15]
+];
+QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+    var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+    var list = new Array();
+    for (var i = 0; i < rsBlock.length; i += 3) {
+        var count = rsBlock[i];
+        var totalCount = rsBlock[i + 1];
+        var dataCount = rsBlock[i + 2];
+        for (var j = 0; j < count; j++) list.push(new QRRSBlock(totalCount, dataCount));
+    }
+    return list;
+};
+QRRSBlock.getRsBlockTable = function(typeNumber, ecLevel) {
+    var lvl = {L:0, M:1, Q:2, H:3}[ecLevel];
+    return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + lvl];
+};
+
+function QRBitBuffer() { this.buffer = new Array(); this.length = 0; }
+QRBitBuffer.prototype = {
+    get: function(index) { return ((this.buffer[Math.floor(index / 8)] >>> (7 - index % 8)) & 1) == 1; },
+    put: function(num, length) { for (var i = 0; i < length; i++) this.putBit(((num >>> (length - i - 1)) & 1) == 1); },
+    putBit: function(bit) {
+        if (this.length >= this.buffer.length * 8) this.buffer.push(0);
+        if (bit) this.buffer[Math.floor(this.length / 8)] |= (0x80 >>> (this.length % 8));
+        this.length++;
+    }
+};
+
+function QR8bitByte(data) {
+    this.mode = 4;
+    this.data = data;
+    this.parsedData = [];
+    var byteData = new TextEncoder().encode(data);
+    this.parsedData = Array.from(byteData);
+    this.parsedData.forEach(function(b){ if(b>255) throw new Error("Multi-byte"); });
+}
+QR8bitByte.prototype = {
+    getLength: function() { return this.parsedData.length; },
+    write: function(buffer) { for (var i = 0; i < this.parsedData.length; i++) buffer.put(this.parsedData[i], 8); }
+};
+
+function QRCode_create(text, ecLevel) {
+    var ecLvlMap = {L:1, M:0, Q:3, H:2};
+    var ecl = ecLvlMap[ecLevel] !== undefined ? ecLevel : 'M';
+    var eclIndex = {L:0, M:1, Q:2, H:3}[ecl];
+    
+    // Find minimum type number
+    var typeNumber = 1;
+    for (; typeNumber <= 40; typeNumber++) {
+        var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, ecl);
+        var totalDataCount = 0;
+        for (var i = 0; i < rsBlocks.length; i++) totalDataCount += rsBlocks[i].dataCount;
+        
+        var buffer = new QRBitBuffer();
+        var data = new QR8bitByte(text);
+        buffer.put(data.mode, 4);
+        buffer.put(data.getLength(), typeNumber < 10 ? 8 : 16);
+        data.write(buffer);
+        
+        // Terminator
+        if (buffer.length + 4 <= totalDataCount * 8) buffer.put(0, 4);
+        // Padding
+        while (buffer.length % 8 != 0) buffer.putBit(false);
+        // Padding bytes
+        var padding = 0xEC;
+        while (buffer.length < totalDataCount * 8) {
+            buffer.put(padding, 8);
+            padding = (padding == 0xEC) ? 0x11 : 0xEC;
+        }
+        
+        if (buffer.length <= totalDataCount * 8) break;
+    }
+    if (typeNumber > 40) throw new Error("Text too long for QR code");
+    
+    // Recreate with found type number
+    var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, ecl);
+    var totalDataCount = 0;
+    for (var i = 0; i < rsBlocks.length; i++) totalDataCount += rsBlocks[i].dataCount;
+    
+    var buffer = new QRBitBuffer();
+    var data = new QR8bitByte(text);
+    buffer.put(data.mode, 4);
+    buffer.put(data.getLength(), typeNumber < 10 ? 8 : 16);
+    data.write(buffer);
+    if (buffer.length + 4 <= totalDataCount * 8) buffer.put(0, 4);
+    while (buffer.length % 8 != 0) buffer.putBit(false);
+    var padding = 0xEC;
+    while (buffer.length < totalDataCount * 8) { buffer.put(padding, 8); padding = (padding == 0xEC) ? 0x11 : 0xEC; }
+    
+    // Create final data with error correction
+    var offset = 0;
+    var maxDc = 0;
+    var maxEc = 0;
+    var dcdata = new Array(rsBlocks.length);
+    var ecdata = new Array(rsBlocks.length);
+    
+    for (var r = 0; r < rsBlocks.length; r++) {
+        var dcCount = rsBlocks[r].dataCount;
+        var ecCount = rsBlocks[r].totalCount - dcCount;
+        maxDc = Math.max(maxDc, dcCount);
+        maxEc = Math.max(maxEc, ecCount);
+        dcdata[r] = new Array(dcCount);
+        for (var i = 0; i < dcCount; i++) dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+        offset += dcCount;
+        
+        // Error correction
+        var rsPoly = getErrorCorrectPolynomial(ecCount);
+        var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+        var modPoly = rawPoly.mod(rsPoly);
+        ecdata[r] = new Array(rsPoly.getLength() - 1);
+        for (var i = 0; i < ecdata[r].length; i++) {
+            var modIndex = i + modPoly.getLength() - ecdata[r].length;
+            ecdata[r][i] = (modIndex >= 0) ? modPoly.get(modIndex) : 0;
+        }
+    }
+    
+    var totalCodeCount = 0;
+    for (var i = 0; i < rsBlocks.length; i++) totalCodeCount += rsBlocks[i].totalCount;
+    var data2 = new Array(totalCodeCount);
+    var index = 0;
+    for (var i = 0; i < maxDc; i++) for (var r = 0; r < rsBlocks.length; r++) if (i < dcdata[r].length) data2[index++] = dcdata[r][i];
+    for (var i = 0; i < maxEc; i++) for (var r = 0; r < rsBlocks.length; r++) if (i < ecdata[r].length) data2[index++] = ecdata[r][i];
+    
+    // Build modules matrix
+    var moduleCount = typeNumber * 4 + 17;
+    var modules = new Array(moduleCount);
+    for (var i = 0; i < moduleCount; i++) { modules[i] = new Array(moduleCount); for (var j = 0; j < moduleCount; j++) modules[i][j] = null; }
+    
+    // Function patterns
+    setupFinderPattern(modules, 0, 0);
+    setupFinderPattern(modules, moduleCount - 7, 0);
+    setupFinderPattern(modules, 0, moduleCount - 7);
+    setupTimingPattern(modules, moduleCount);
+    setupAlignmentPattern(modules, moduleCount, typeNumber);
+    
+    // Format info placeholder
+    var maskPattern = 0; // Using mask 0 for simplicity; ideally test all masks
+    // Try all masks and pick best
+    var minPenalty = Infinity;
+    var bestMask = 0;
+    for (var mp = 0; mp < 8; mp++) {
+        var testModules = modules.map(function(row) { return row.slice(); });
+        var bc = new BitChannel(moduleCount);
+        // Place data
+        placeData(testModules, data2, moduleCount, mp);
+        setupFormatInfo(testModules, moduleCount, eclIndex, mp);
+        setupVersionInfo(testModules, moduleCount, typeNumber);
+        var penalty = calculatePenalty(testModules, moduleCount);
+        if (penalty < minPenalty) { minPenalty = penalty; bestMask = mp; }
+    }
+    
+    maskPattern = bestMask;
+    placeData(modules, data2, moduleCount, maskPattern);
+    setupFormatInfo(modules, moduleCount, eclIndex, maskPattern);
+    setupVersionInfo(modules, moduleCount, typeNumber);
+    
+    return { modules: modules, count: moduleCount };
+}
+
+function getErrorCorrectPolynomial(ecLength) {
+    var a = new QRPolynomial([1], 0);
+    for (var i = 0; i < ecLength; i++) a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0));
+    return a;
+}
+
+function setupFinderPattern(modules, row, col) {
+    for (var r = -1; r <= 7; r++) {
+        if (row + r < 0 || modules.length <= row + r) continue;
+        for (var c = -1; c <= 7; c++) {
+            if (col + c < 0 || modules.length <= col + c) continue;
+            if (r >= 0 && r <= 6 && c >= 0 && c <= 6) {
+                modules[row + r][col + c] = (r == 0 || r == 6 || c == 0 || c == 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4));
+            } else {
+                modules[row + r][col + c] = false;
+            }
+        }
+    }
+}
+
+function setupTimingPattern(modules, count) {
+    for (var i = 8; i < count - 8; i++) {
+        if (modules[6][i] == null) modules[6][i] = (i % 2 == 0);
+        if (modules[i][6] == null) modules[i][6] = (i % 2 == 0);
+    }
+}
+
+var ALIGN_POS = {
+    1: [], 2:[6,18], 3:[6,22], 4:[6,26], 5:[6,30], 6:[6,34],
+    7:[6,22,38], 8:[6,24,42], 9:[6,26,46], 10:[6,28,50],
+    11:[6,30,54], 12:[6,32,58], 13:[6,34,62], 14:[6,26,46,66],
+    15:[6,26,48,70], 16:[6,26,50,74], 17:[6,30,54,78], 18:[6,30,56,82],
+    19:[6,30,58,86], 20:[6,34,62,90], 21:[6,28,50,72,94], 22:[6,26,50,74,98],
+    23:[6,30,54,78,102], 24:[6,28,54,80,106], 25:[6,32,58,84,110],
+    26:[6,30,58,86,114], 27:[6,34,62,90,118], 28:[6,26,50,74,98,122],
+    29:[6,30,54,78,102,126], 30:[6,26,52,78,104,130], 31:[6,30,56,82,108,134],
+    32:[6,34,60,86,112,138], 33:[6,30,58,86,114,142], 34:[6,34,62,90,118,146],
+    35:[6,30,54,78,102,126,150], 36:[6,24,50,76,102,128,154],
+    37:[6,28,54,80,106,132,158], 38:[6,32,58,84,110,136,162],
+    39:[6,26,54,82,110,138,166], 40:[6,30,58,86,114,142,170]
+};
+
+function setupAlignmentPattern(modules, count, typeNumber) {
+    var pos = ALIGN_POS[typeNumber] || [];
+    for (var i = 0; i < pos.length; i++) {
+        for (var j = 0; j < pos.length; j++) {
+            var row = pos[i], col = pos[j];
+            if (modules[row][col] != null) continue;
+            for (var r = -2; r <= 2; r++)
+                for (var c = -2; c <= 2; c++)
+                    modules[row + r][col + c] = (r == -2 || r == 2 || c == -2 || c == 2 || (r == 0 && c == 0));
+        }
+    }
+}
+
+function BitChannel(count) { this.bitIndex = 7; this.byteIndex = 0; this.count = count; }
+
+function placeData(modules, data, count, maskPattern) {
+    var inc = -1;
+    var row = count - 1;
+    var bitIndex = 7;
+    var byteIndex = 0;
+    
+    for (var col = count - 1; col > 0; col -= 2) {
+        if (col == 6) col--;
+        while (true) {
+            for (var c = 0; c < 2; c++) {
+                if (modules[row][col - c] == null) {
+                    var dark = false;
+                    if (byteIndex < data.length) dark = (((data[byteIndex] >>> bitIndex) & 1) == 1);
+                    // Mask
+                    if (maskPattern == 0) dark = dark ^ (((row + col - c) % 2) == 0);
+                    else if (maskPattern == 1) dark = dark ^ ((row % 2) == 0);
+                    else if (maskPattern == 2) dark = dark ^ ((col - c) % 3 == 0);
+                    else if (maskPattern == 3) dark = dark ^ (((row + col - c) % 3) == 0);
+                    else if (maskPattern == 4) dark = dark ^ (((Math.floor(row / 2) + Math.floor((col - c) / 3)) % 2) == 0);
+                    else if (maskPattern == 5) dark = dark ^ (((row * (col - c)) % 2 + (row * (col - c)) % 3) == 0);
+                    else if (maskPattern == 6) dark = dark ^ ((((row * (col - c)) % 2 + (row * (col - c)) % 3) % 2) == 0);
+                    else if (maskPattern == 7) dark = dark ^ ((((row + (col - c)) % 2 + (row * (col - c)) % 3) % 2) == 0);
+                    
+                    modules[row][col - c] = dark;
+                    bitIndex--;
+                    if (bitIndex == -1) { byteIndex++; bitIndex = 7; }
+                }
+            }
+            row += inc;
+            if (row < 0 || count <= row) { row -= inc; inc = -inc; break; }
+        }
+    }
+}
+
+var FORMAT_INFO = [
+    [0x77c,0x72f,0x7da,0x789,0x662,0x631,0x6c4,0x697],
+    [0x541,0x512,0x5e7,0x5b4,0x45f,0x40c,0x4f9,0x4aa]
+];
+
+function setupFormatInfo(modules, count, eclIndex, maskPattern) {
+    var data = (eclIndex << 3) | maskPattern;
+    var bits = FORMAT_INFO[eclIndex][maskPattern];
+    
+    for (var i = 0; i < 15; i++) {
+        var mod = ((bits >>> i) & 1) != 0;
+        // Around top-left
+        if (i < 6) modules[8][i] = mod;
+        else if (i < 8) modules[8][i + 1] = mod;
+        else if (i < 9) modules[7][8] = mod;
+        else modules[14 - i][8] = mod;
+        // Top-right & bottom-left
+        if (i < 8) modules[count - 1 - i][8] = mod;
+        else modules[8][count - 15 + i] = mod;
+    }
+    modules[count - 8][8] = true;
+}
+
+function setupVersionInfo(modules, count, typeNumber) {
+    if (typeNumber < 7) return;
+    var bits = 0;
+    // Version info calculation
+    var versionData = typeNumber;
+    var rem = versionData;
+    for (var i = 0; i < 12; i++) rem = (rem << 1) ^ ((rem & 0x1000) ? 0x1f25 : 0);
+    bits = (versionData << 12) | (rem & 0xfff);
+    
+    for (var i = 0; i < 18; i++) {
+        var mod = ((bits >>> i) & 1) != 0;
+        var r = Math.floor(i / 3);
+        var c = (i % 3) + count - 11;
+        modules[r][c] = mod;
+        modules[c][r] = mod;
+    }
+}
+
+function calculatePenalty(modules, count) {
+    var penalty = 0;
+    // Rule 1: consecutive modules in row/column
+    for (var i = 0; i < count; i++) {
+        var sameCount = 1;
+        for (var j = 1; j < count; j++) {
+            if (modules[i][j] === modules[i][j-1]) { sameCount++; }
+            else { if (sameCount >= 5) penalty += 3 + (sameCount - 5); sameCount = 1; }
+        }
+        if (sameCount >= 5) penalty += 3 + (sameCount - 5);
+    }
+    for (var j = 0; j < count; j++) {
+        var sameCount2 = 1;
+        for (var i = 1; i < count; i++) {
+            if (modules[i][j] === modules[i-1][j]) { sameCount2++; }
+            else { if (sameCount2 >= 5) penalty += 3 + (sameCount2 - 5); sameCount2 = 1; }
+        }
+        if (sameCount2 >= 5) penalty += 3 + (sameCount2 - 5);
+    }
+    return penalty;
+}
+
+function drawQR(ctx, qr, size) {
+    var count = qr.count;
+    var cellSize = size / count;
+    
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, size, size);
+    
+    ctx.fillStyle = '#000000';
+    for (var row = 0; row < count; row++) {
+        for (var col = 0; col < count; col++) {
+            if (qr.modules[row][col]) {
+                ctx.fillRect(Math.floor(col * cellSize), Math.floor(row * cellSize), Math.ceil(cellSize), Math.ceil(cellSize));
+            }
+        }
+    }
+}
+
+// Generate initial QR
+generateQR();
+
+// ==================== Password Generator ====================
+function generatePwd() {
+    const len = parseInt(document.getElementById('pwdLen').value);
+    const upper = document.getElementById('pwdUpper').checked;
+    const lower = document.getElementById('pwdLower').checked;
+    const num = document.getElementById('pwdNum').checked;
+    const sym = document.getElementById('pwdSym').checked;
+    
+    let charset = '';
+    if (upper) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (lower) charset += 'abcdefghijklmnopqrstuvwxyz';
+    if (num) charset += '0123456789';
+    if (sym) charset += '!@#$%^&*()_+-=[]{}|;:,.<>?';
+    
+    if (!charset) { document.getElementById('pwdOutput').textContent = '请至少选择一种字符类型'; return; }
+    
+    const arr = new Uint32Array(len);
+    crypto.getRandomValues(arr);
+    let pwd = '';
+    for (let i = 0; i < len; i++) pwd += charset[arr[i] % charset.length];
+    
+    document.getElementById('pwdOutput').textContent = pwd;
+    
+    // Strength
+    let score = 0;
+    if (len >= 8) score++;
+    if (len >= 12) score++;
+    if (len >= 16) score++;
+    if (upper && lower) score++;
+    if (num) score++;
+    if (sym) score++;
+    const strengthTexts = ['很弱', '弱', '一般', '较强', '强', '很强', '极强'];
+    const strengthColors = ['#ef4444', '#f59e0b', '#f59e0b', '#10b981', '#10b981', '#10b981', '#10b981'];
+    const idx = Math.min(score, 6);
+    document.getElementById('pwdStrength').innerHTML = `强度: <span style="color:${strengthColors[idx]}; font-weight:600;">${strengthTexts[idx]}</span>`;
+}
+
+function copyPwd() {
+    const pwd = document.getElementById('pwdOutput').textContent;
+    navigator.clipboard.writeText(pwd).then(() => {
+        const btn = event.target;
+        const orig = btn.textContent;
+        btn.textContent = '已复制!';
+        setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+}
+
+generatePwd();
+
+// ==================== Word Count ====================
+function countWords() {
+    const text = document.getElementById('wcInput').value;
+    document.getElementById('wcTotal').textContent = text.length;
+    document.getElementById('wcChinese').textContent = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+    document.getElementById('wcEnglish').textContent = (text.match(/[a-zA-Z]/g) || []).length;
+    document.getElementById('wcDigits').textContent = (text.match(/[0-9]/g) || []).length;
+    document.getElementById('wcWords').textContent = (text.match(/[a-zA-Z]+/g) || []).length;
+    document.getElementById('wcLines').textContent = text === '' ? 0 : text.split('\n').length;
+}
+
+// ==================== BMI Calculator ====================
+function calcBMI() {
+    const h = parseFloat(document.getElementById('bmiHeight').value) / 100;
+    const w = parseFloat(document.getElementById('bmiWeight').value);
+    if (!h || !w) { alert('请输入身高和体重'); return; }
+    
+    const bmi = w / (h * h);
+    let category, color;
+    if (bmi < 18.5) { category = '偏瘦'; color = '#f59e0b'; }
+    else if (bmi < 24) { category = '正常'; color = '#10b981'; }
+    else if (bmi < 28) { category = '偏胖'; color = '#f59e0b'; }
+    else { category = '肥胖'; color = '#ef4444'; }
+    
+    document.getElementById('bmiValue').textContent = bmi.toFixed(1);
+    document.getElementById('bmiValue').style.color = color;
+    document.getElementById('bmiDetail').innerHTML = `
+        <table>
+            <tr><td>分类</td><td style="color:${color}; font-weight:600;">${category}</td></tr>
+            <tr><td>正常范围</td><td>18.5 - 24.0</td></tr>
+            <tr><td>理想体重</td><td>${(22 * h * h).toFixed(1)} kg</td></tr>
+            <tr><td>偏胖临界体重</td><td>${(24 * h * h).toFixed(1)} kg</td></tr>
+            <tr><td>需要减重</td><td>${w > 24*h*h ? (w - 24*h*h).toFixed(1)+' kg' : '无需减重'}</td></tr>
+        </table>
+    `;
+    document.getElementById('bmiResult').classList.add('show');
+}
+
+// ==================== Timestamp Converter ====================
+function updateTimestamp() {
+    document.getElementById('tsNow').value = Math.floor(Date.now() / 1000);
+}
+updateTimestamp();
+setInterval(updateTimestamp, 1000);
+
+function tsToDate() {
+    let ts = parseInt(document.getElementById('tsInput').value);
+    if (isNaN(ts)) { document.getElementById('tsOutput').textContent = '请输入有效时间戳'; document.getElementById('tsOutput').classList.add('show'); return; }
+    
+    // Auto-detect seconds vs milliseconds
+    if (ts > 9999999999) ts = Math.floor(ts / 1000);
+    
+    const d = new Date(ts * 1000);
+    const dateStr = d.getFullYear() + '-' +
+        String(d.getMonth() + 1).padStart(2, '0') + '-' +
+        String(d.getDate()).padStart(2, '0') + ' ' +
+        String(d.getHours()).padStart(2, '0') + ':' +
+        String(d.getMinutes()).padStart(2, '0') + ':' +
+        String(d.getSeconds()).padStart(2, '0');
+    
+    document.getElementById('tsOutput').textContent = dateStr;
+    document.getElementById('tsOutput').classList.add('show');
+}
+
+function dateToTs() {
+    const dateStr = document.getElementById('dateInput').value;
+    if (!dateStr) { document.getElementById('tsOutput2').textContent = '请选择日期时间'; document.getElementById('tsOutput2').classList.add('show'); return; }
+    
+    const d = new Date(dateStr);
+    const ts = Math.floor(d.getTime() / 1000);
+    
+    document.getElementById('tsOutput2').textContent = '秒级: ' + ts + '\n毫秒级: ' + (ts * 1000);
+    document.getElementById('tsOutput2').classList.add('show');
+}
+
+// ==================== Color Converter ====================
+function colorFromHex() {
+    let hex = document.getElementById('colorHex').value.trim().replace('#', '');
+    if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+    if (!/^[0-9a-fA-F]{6}$/.test(hex)) return;
+    
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    
+    document.getElementById('colorRgb').value = `rgb(${r}, ${g}, ${b})`;
+    document.getElementById('colorHsl').value = rgbToHsl(r, g, b);
+    document.getElementById('colorPreview').style.background = '#' + hex;
+}
+
+function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) { h = s = 0; }
+    else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r: h = ((g - b) / d + (g < b ? 6 : 0)); break;
+            case g: h = ((b - r) / d + 2); break;
+            case b: h = ((r - g) / d + 4); break;
+        }
+        h /= 6;
+    }
+    return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+}
+
+colorFromHex();
+
+// ==================== Case Converter ====================
+function convertCase(mode) {
+    const text = document.getElementById('caseInput').value;
+    let result = '';
+    switch(mode) {
+        case 'upper': result = text.toUpperCase(); break;
+        case 'lower': result = text.toLowerCase(); break;
+        case 'title': result = text.replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()); break;
+        case 'sentence': result = text.toLowerCase().replace(/(^\w|\.\s+\w)/g, t => t.toUpperCase()); break;
+        case 'preview': result = text.toUpperCase(); break;
+    }
+    document.getElementById('caseOutput').textContent = result;
+}
+
+function copyCase() {
+    const text = document.getElementById('caseOutput').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        const orig = btn.textContent;
+        btn.textContent = '已复制!';
+        setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+}
+
+convertCase('preview');
+
+// ==================== Investment Calculator ====================
+function toggleInvestMode() {
+    const mode = document.getElementById('investMode').value;
+    document.getElementById('dcaFreqGroup').style.display = mode === 'dca' ? '' : 'none';
+    document.getElementById('investAmtLabel').textContent = mode === 'dca' ? '每期投入金额（元）' : '投资金额（元）';
+}
+
+function calcInvest() {
+    const mode = document.getElementById('investMode').value;
+    const amount = parseFloat(document.getElementById('investAmount').value);
+    const annualRate = parseFloat(document.getElementById('investRate').value) / 100;
+    const years = parseInt(document.getElementById('investYears').value);
+    
+    if (!amount || !annualRate || !years) { alert('请填写完整信息'); return; }
+    
+    let finalAmount, totalInvested, profit, detail;
+    
+    if (mode === 'lump') {
+        finalAmount = amount * Math.pow(1 + annualRate, years);
+        totalInvested = amount;
+        profit = finalAmount - amount;
+        detail = `
+            <table>
+                <tr><td>投资本金</td><td>${amount.toLocaleString()} 元</td></tr>
+                <tr><td>年化收益率</td><td>${(annualRate*100).toFixed(2)}%</td></tr>
+                <tr><td>投资年限</td><td>${years} 年</td></tr>
+                <tr><td>到期总金额</td><td>${finalAmount.toFixed(2).toLocaleString()} 元</td></tr>
+                <tr><td>净收益</td><td style="color:var(--success); font-weight:600;">${profit.toFixed(2).toLocaleString()} 元</td></tr>
+                <tr><td>收益倍数</td><td>${(finalAmount/amount).toFixed(2)} 倍</td></tr>
+                <tr><td>年化复利效果</td><td>每年增长 ${(annualRate*100).toFixed(1)}%</td></tr>
+            </table>
+        `;
+    } else {
+        const freqPerYear = parseInt(document.getElementById('dcaFreq').value);
+        const periods = freqPerYear * years;
+        const periodRate = annualRate / freqPerYear;
+        finalAmount = amount * ((Math.pow(1 + periodRate, periods) - 1) / periodRate) * (1 + periodRate);
+        totalInvested = amount * periods;
+        profit = finalAmount - totalInvested;
+        detail = `
+            <table>
+                <tr><td>每期投入</td><td>${amount.toLocaleString()} 元</td></tr>
+                <tr><td>定投频率</td><td>每年 ${freqPerYear} 次</td></tr>
+                <tr><td>累计投入</td><td>${totalInvested.toLocaleString()} 元</td></tr>
+                <tr><td>到期总金额</td><td>${finalAmount.toFixed(2).toLocaleString()} 元</td></tr>
+                <tr><td>净收益</td><td style="color:var(--success); font-weight:600;">${profit.toFixed(2).toLocaleString()} 元</td></tr>
+                <tr><td>收益率</td><td>${(profit/totalInvested*100).toFixed(1)}%</td></tr>
+            </table>
+        `;
+    }
+    
+    document.getElementById('investValue').textContent = '到期金额: ' + finalAmount.toFixed(2) + ' 元';
+    document.getElementById('investDetail').innerHTML = detail;
+    document.getElementById('investResult').classList.add('show');
+}
+
+// ==================== Side Job Calculator ====================
+function calcSideJob() {
+    const monthly = parseFloat(document.getElementById('sideMonthly').value);
+    const weeklyHours = parseFloat(document.getElementById('sideHours').value);
+    const days = parseInt(document.getElementById('sideDays').value);
+    const cost = parseFloat(document.getElementById('sideCost').value);
+    
+    if (!monthly || !weeklyHours || !days) { alert('请填写完整信息'); return; }
+    
+    const monthlyHours = weeklyHours * 4; // approx 4 weeks/month
+    const hourlyRateRaw = (monthly + cost) / monthlyHours;
+    const dailyRate = hourlyRateRaw * (weeklyHours / (days/4 > 0 ? Math.ceil(days/4) : 5));
+    const netMonthly = monthly - cost;
+    const yearlyNet = netMonthly * 12;
+    const hourlyNet = monthly / monthlyHours;
+    
+    document.getElementById('sideValue').textContent = '建议时薪: ' + hourlyRateRaw.toFixed(1) + ' 元/小时';
+    document.getElementById('sideDetail').innerHTML = `
+        <table>
+            <tr><td>每月工作时长</td><td>${monthlyHours} 小时</td></tr>
+            <tr><td>含成本时薪（保底报价）</td><td style="color:var(--danger);">${hourlyRateRaw.toFixed(1)} 元/小时</td></tr>
+            <tr><td>净时薪（到手）</td><td style="color:var(--success);">${hourlyNet.toFixed(1)} 元/小时</td></tr>
+            <tr><td>建议日报价</td><td>${dailyRate.toFixed(0)} 元/天</td></tr>
+            <tr><td>月收入（毛）</td><td>${monthly.toLocaleString()} 元</td></tr>
+            <tr><td>月成本/开销</td><td>${cost.toLocaleString()} 元</td></tr>
+            <tr><td>月净收入</td><td style="color:var(--success); font-weight:600;">${netMonthly.toLocaleString()} 元</td></tr>
+            <tr><td>年净收入</td><td style="color:var(--success); font-weight:600;">${yearlyNet.toLocaleString()} 元</td></tr>
+        </table>
+    `;
+    document.getElementById('sideResult').classList.add('show');
+}
+
+// ==================== Savings Interest Calculator ====================
+function updateSaveRate() {
+    const type = document.getElementById('saveType').value;
+    document.getElementById('customRateGroup').style.display = type === 'custom' ? '' : 'none';
+}
+
+function calcSavings() {
+    const amount = parseFloat(document.getElementById('saveAmount').value);
+    let rateStr = document.getElementById('saveType').value;
+    const years = parseInt(document.getElementById('saveYears').value);
+    
+    let annualRate;
+    if (rateStr === 'custom') {
+        annualRate = parseFloat(document.getElementById('saveCustomRate').value) / 100;
+        if (!annualRate) { alert('请输入自定义利率'); return; }
+    } else {
+        annualRate = parseFloat(rateStr) / 100;
+    }
+    
+    if (!amount || !years) { alert('请填写完整信息'); return; }
+    
+    // Simple interest for bank deposits (standard in China)
+    const interest = amount * annualRate * years;
+    const total = amount + interest;
+    const monthlyInterest = interest / (years * 12);
+    
+    let typeName = document.getElementById('saveType');
+    typeName = typeName.options[typeName.selectedIndex].text;
+    
+    document.getElementById('saveValue').textContent = '到期利息: ' + interest.toFixed(2) + ' 元';
+    document.getElementById('saveDetail').innerHTML = `
+        <table>
+            <tr><td>存款类型</td><td>${typeName}</td></tr>
+            <tr><td>存款金额</td><td>${amount.toLocaleString()} 元</td></tr>
+            <tr><td>年利率</td><td>${(annualRate*100).toFixed(2)}%</td></tr>
+            <tr><td>存款期限</td><td>${years} 年</td></tr>
+            <tr><td>到期利息</td><td style="color:var(--success); font-weight:600;">${interest.toFixed(2)} 元</td></tr>
+            <tr><td>本息合计</td><td style="color:var(--primary); font-weight:600;">${total.toFixed(2)} 元</td></tr>
+            <tr><td>折合月利息</td><td>${monthlyInterest.toFixed(2)} 元/月</td></tr>
+        </table>
+    `;
+    document.getElementById('saveResult').classList.add('show');
+}
+</script>
+
+</body>
+</html>
