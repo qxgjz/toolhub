@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://www.toolhub.asia">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+    <link rel="preconnect" href="https://hm.baidu.com" crossorigin>
+    
+    <!-- DNS Prefetch for performance -->
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
@@ -84,6 +88,25 @@
                 "item": "https://www.toolhub.asia/"
             }
         ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "在线工具箱 ToolHub",
+        "url": "https://www.toolhub.asia/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.toolhub.asia/?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "description": "免费在线实用工具合集，包含JSON格式化、Base64编解码、MD5哈希、UUID生成、投资收益计算器、房贷计算器、二维码生成、JWT解码、汇率换算、CSS渐变、SVG预览等50+工具"
     }
     </script>
 
@@ -2531,7 +2554,7 @@
         <div class="result" id="imgBase64Result" style="display:none;">
             <div class="result-title">Base64结果</div>
             <div style="margin-top:12px;">
-                <img id="imgPreview" alt="SVG预览图" style="max-width:100%;border-radius:8px;border:1px solid var(--border);margin-bottom:12px;">
+                <img id="imgPreview" alt="SVG预览图" style="max-width:100%;border-radius:8px;border:1px solid var(--border);margin-bottom:12px;" loading="lazy">
             </div>
             <div style="margin-top:8px;">
                 <label style="font-size:0.8rem;color:var(--text-light);">Data URI (<span id="base64Size">0</span> 字符):</label>
