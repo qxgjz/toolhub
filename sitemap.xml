@@ -1,198 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://toolhub.asia/</loc>
+        <loc>https://www.toolhub.asia/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#age</loc>
+        <loc>https://www.toolhub.asia/#age</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#mortgage</loc>
+        <loc>https://www.toolhub.asia/#mortgage</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#unit</loc>
+        <loc>https://www.toolhub.asia/#unit</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#qr</loc>
+        <loc>https://www.toolhub.asia/#qr</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#password</loc>
+        <loc>https://www.toolhub.asia/#password</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#wordcount</loc>
+        <loc>https://www.toolhub.asia/#wordcount</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#bmi</loc>
+        <loc>https://www.toolhub.asia/#bmi</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#timestamp</loc>
+        <loc>https://www.toolhub.asia/#timestamp</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#color</loc>
+        <loc>https://www.toolhub.asia/#color</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#case</loc>
+        <loc>https://www.toolhub.asia/#case</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#invest</loc>
+        <loc>https://www.toolhub.asia/#invest</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#sidejob</loc>
+        <loc>https://www.toolhub.asia/#sidejob</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#savings</loc>
+        <loc>https://www.toolhub.asia/#savings</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#json</loc>
+        <loc>https://www.toolhub.asia/#json</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#base64</loc>
+        <loc>https://www.toolhub.asia/#base64</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#urlencoder</loc>
+        <loc>https://www.toolhub.asia/#urlencoder</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#md5</loc>
+        <loc>https://www.toolhub.asia/#md5</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#uuid</loc>
+        <loc>https://www.toolhub.asia/#uuid</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#baseconvert</loc>
+        <loc>https://www.toolhub.asia/#baseconvert</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#textdedup</loc>
+        <loc>https://www.toolhub.asia/#textdedup</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#textdiff</loc>
+        <loc>https://www.toolhub.asia/#textdiff</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#regex</loc>
+        <loc>https://www.toolhub.asia/#regex</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#cssmin</loc>
+        <loc>https://www.toolhub.asia/#cssmin</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#lorem</loc>
+        <loc>https://www.toolhub.asia/#lorem</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#httpcode</loc>
+        <loc>https://www.toolhub.asia/#httpcode</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#jwt</loc>
+        <loc>https://www.toolhub.asia/#jwt</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#cron</loc>
+        <loc>https://www.toolhub.asia/#cron</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#htmlencode</loc>
+        <loc>https://www.toolhub.asia/#htmlencode</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#ipquery</loc>
+        <loc>https://www.toolhub.asia/#ipquery</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#jsmin</loc>
+        <loc>https://www.toolhub.asia/#jsmin</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#caseconvert</loc>
+        <loc>https://www.toolhub.asia/#caseconvert</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#charcount</loc>
+        <loc>https://www.toolhub.asia/#charcount</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#random</loc>
+        <loc>https://www.toolhub.asia/#random</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#datediff</loc>
+        <loc>https://www.toolhub.asia/#datediff</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#percent</loc>
+        <loc>https://www.toolhub.asia/#percent</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#img2base64</loc>
+        <loc>https://www.toolhub.asia/#img2base64</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#morse</loc>
+        <loc>https://www.toolhub.asia/#morse</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://toolhub.asia/#calculator</loc>
+        <loc>https://www.toolhub.asia/#calculator</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
