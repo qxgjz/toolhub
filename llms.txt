@@ -1,0 +1,64 @@
+# ToolHub - 在线工具箱
+
+> 免费在线工具箱，提供33+实用工具，全部在浏览器本地运行，数据不上传，打开即用。
+
+## 关于
+
+ToolHub 是一个纯前端工具网站，所有计算和处理都在用户浏览器中完成，不依赖任何后端服务器。网站提供33+实用工具，覆盖生活实用、理财计算、开发工具和文本处理四大分类。
+
+## 工具列表
+
+### 生活实用
+- 年龄计算器 (#age) - 精确计算周岁、月龄、天数
+- 单位换算 (#unit) - 长度、重量、温度换算
+- BMI计算器 (#bmi) - 身体质量指数计算
+
+### 理财计算
+- 房贷计算器 (#mortgage) - 等额本息/等额本金月供
+- 投资收益计算器 (#invest) - 复利/定投收益模拟
+- 副业收入计算器 (#sidejob) - 自由职业报价与时薪
+- 存款利息计算器 (#savings) - 银行存款到期收益
+
+### 开发工具
+- 二维码生成器 (#qr) - 文本/网址转二维码
+- 密码生成器 (#password) - 生成安全随机密码
+- 时间戳转换 (#timestamp) - Unix时间戳与日期互转
+- 颜色转换 (#color) - HEX/RGB/HSL互转
+- JSON格式化 (#json) - JSON美化/压缩/校验
+- Base64编解码 (#base64) - Base64编码与解码
+- URL编解码 (#urlencoder) - URL百分号编码与解码
+- MD5哈希计算 (#md5) - MD5/SHA哈希生成
+- UUID生成器 (#uuid) - 生成UUID/GUID v4
+- 进制转换 (#baseconvert) - 二/八/十/十六进制互转
+- 正则表达式测试 (#regex) - 在线测试正则匹配
+- CSS压缩 (#cssmin) - 压缩CSS减小体积
+- HTTP状态码查询 (#httpcode) - 查询状态码含义
+- JWT解码器 (#jwt) - 解码JWT令牌Header/Payload
+- Cron表达式生成器 (#cron) - 可视化生成Cron定时表达式
+- HTML编解码 (#htmlencode) - HTML实体编码与解码
+- IP地址查询 (#ipquery) - IP地址信息与子网计算
+- JS压缩 (#jsmin) - 压缩JavaScript减小体积
+- 命名格式转换 (#caseconvert) - 驼峰/下划线/帕斯卡互转
+
+### 文本处理
+- 字数统计 (#wordcount) - 中英文字符、行数统计
+- 大小写转换 (#case) - 英文大小写转换
+- 文本去重 (#textdedup) - 删除重复行和空行
+- 文本对比 (#textdiff) - 逐行对比文本差异
+- 随机文本生成器 (#lorem) - 生成占位填充文本
+- 字符字节统计 (#charcount) - 统计字符数和字节数
+
+## 技术特点
+
+- 纯前端实现，无后端依赖
+- 所有数据本地处理，不上传服务器
+- 支持暗色模式
+- 响应式设计，适配移动端
+- PWA 支持
+- 每个工具支持 hash 路由独立访问
+
+## 网址
+
+- 线上地址: https://qxgjz.github.io/toolhub/
+- GitHub仓库: https://github.com/qxgjz/toolhub
+- 站点地图: https://qxgjz.github.io/toolhub/sitemap.xml
