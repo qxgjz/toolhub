@@ -2,379 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.toolhub.asia/</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/about.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/age-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/base-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/base64-encoder.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/base64-guide.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/blog.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/bmi-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/case-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/char-byte-counter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/color-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/color-palette-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/contact.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/cron-expression-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/css-gradient-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/css-minifier.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/csv-json-converter.html</loc>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/currency-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/days-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/file-size-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/html-encoder-decoder.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/http-status-code-lookup.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/image-compressor.html</loc>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/image-to-base64-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/investment-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/ip-address-lookup.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/javascript-minifier.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/json-formatter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/json-formatting-guide.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/jwt-decoder.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/list-sorter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/lorem-ipsum-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/markdown-editor.html</loc>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/md5-hash.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/morse-code-translator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/mortgage-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/mortgage-guide.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/naming-convention-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/password-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/password-guide.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/password-strength-checker.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/percentage-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/privacy.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/qr-code-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/qr-code-guide.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/random-number-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/reading-speed-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/regex-tester.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/savings-interest-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/scientific-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/short-link-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/side-income-calculator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/svg-preview-tool.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/terms.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/text-deduplicator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/text-diff-tool.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/text-formatter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/text-reverser.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/timestamp-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/unit-converter.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/url-encoder-decoder.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/uuid-generator.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/word-count-tool.html</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/robots.txt</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/llms.txt</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.toolhub.asia/manifest.json</loc>
-    <lastmod>2026-08-12T20:53:21.549Z</lastmod>
+    <lastmod>2026-08-12T20:59:16.514Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
