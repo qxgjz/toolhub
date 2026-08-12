@@ -1,9 +1,9 @@
 {
     "name": "在线工具箱 ToolHub",
     "short_name": "ToolHub",
-    "description": "20+免费在线实用工具，全部本地运行，打开即用",
-    "start_url": "https://qxgjz.github.io/toolhub/",
-    "scope": "/toolhub/",
+    "description": "38+免费在线实用工具，全部本地运行，打开即用",
+    "start_url": "https://toolhub.asia/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#f1f5f9",
     "theme_color": "#4f46e5",
