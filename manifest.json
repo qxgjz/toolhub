@@ -1,7 +1,7 @@
 {
     "name": "在线工具箱 ToolHub",
     "short_name": "ToolHub",
-    "description": "38+免费在线实用工具，全部本地运行，打开即用",
+    "description": "50+免费在线实用工具，全部本地运行，打开即用",
     "start_url": "https://www.toolhub.asia/",
     "scope": "/",
     "display": "standalone",
