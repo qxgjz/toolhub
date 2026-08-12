@@ -927,11 +927,16 @@
 function showTool(name) {
     document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
     document.getElementById('tool-' + name).classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('toolGrid').style.display = 'none';
+    document.querySelector('.ad-slot').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function showGrid() {
     document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+    document.getElementById('toolGrid').style.display = '';
+    document.querySelector('.ad-slot').style.display = '';
+    window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function filterTools() {
