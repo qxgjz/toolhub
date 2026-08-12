@@ -396,4 +396,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.toolhub.asia/json-vs-xml-comparison.html</loc>
+    <lastmod>2026-08-13T06:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/base64-encoding-explained.html</loc>
+    <lastmod>2026-08-13T06:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/password-security-guide-2026.html</loc>
+    <lastmod>2026-08-13T06:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/qr-code-technical-guide.html</loc>
+    <lastmod>2026-08-13T06:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/web-developer-essential-tools-2026.html</loc>
+    <lastmod>2026-08-13T06:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
