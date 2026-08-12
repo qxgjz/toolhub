@@ -1,74 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://your-domain.com/</loc>
+        <loc>https://qxgjz.github.io/toolhub/</loc>
         <lastmod>2026-08-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#age</loc>
+        <loc>https://qxgjz.github.io/toolhub/#age</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#mortgage</loc>
+        <loc>https://qxgjz.github.io/toolhub/#mortgage</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#unit</loc>
+        <loc>https://qxgjz.github.io/toolhub/#unit</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#qr</loc>
+        <loc>https://qxgjz.github.io/toolhub/#qr</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#password</loc>
+        <loc>https://qxgjz.github.io/toolhub/#password</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#wordcount</loc>
+        <loc>https://qxgjz.github.io/toolhub/#wordcount</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#bmi</loc>
+        <loc>https://qxgjz.github.io/toolhub/#bmi</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#timestamp</loc>
+        <loc>https://qxgjz.github.io/toolhub/#timestamp</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#color</loc>
+        <loc>https://qxgjz.github.io/toolhub/#color</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#case</loc>
+        <loc>https://qxgjz.github.io/toolhub/#case</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#invest</loc>
+        <loc>https://qxgjz.github.io/toolhub/#invest</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#sidejob</loc>
+        <loc>https://qxgjz.github.io/toolhub/#sidejob</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://your-domain.com/#savings</loc>
+        <loc>https://qxgjz.github.io/toolhub/#savings</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#json</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#base64</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#urlencoder</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#md5</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#uuid</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#baseconvert</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://qxgjz.github.io/toolhub/#textdedup</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
