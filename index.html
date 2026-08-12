@@ -13,10 +13,8 @@
 
     <!-- Resource Hints for Core Web Vitals -->
     <link rel="preconnect" href="https://www.toolhub.asia">
-    <link rel="dns-prefetch" href="https://hm.baidu.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="dns-prefetch" href="https://hm.baidu.com">
     <link rel="preconnect" href="https://hm.baidu.com" crossorigin>
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
     
     <!-- DNS Prefetch for performance -->
 
@@ -563,6 +561,9 @@
         }
 
         .tool-card {
+            contain: layout style paint;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 100px;
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 24px 16px;
@@ -1040,6 +1041,7 @@
             color: var(--text-light);
             font-size: 0.85rem;
             min-height: 90px;
+            height: 90px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2937,6 +2939,7 @@
         <a href="/about.html">关于我们</a>
         <a href="/privacy.html">隐私政策</a>
         <a href="/terms.html">使用条款</a>
+        <a href="/contact.html">商务合作</a>
         <a href="#" id="privacyLink">隐私说明</a>
         <a href="#" id="termsLink">使用协议</a>
         <a href="mailto:contact@toolhub.asia">联系我们</a>
