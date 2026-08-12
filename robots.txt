@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolhub.asia/sitemap.xml
+Sitemap: https://www.toolhub.asia/sitemap.xml
