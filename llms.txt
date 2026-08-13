@@ -1,64 +1,111 @@
-# ToolHub - 在线工具箱
+# ToolHub - Free Online Tools Collection
 
-> 免费在线工具箱，提供33+实用工具，全部在浏览器本地运行，数据不上传，打开即用。
+> 49+ free online tools, all running locally in the browser. No registration, no data upload, open and use.
 
-## 关于
+## Overview
 
-ToolHub 是一个纯前端工具网站，所有计算和处理都在用户浏览器中完成，不依赖任何后端服务器。网站提供33+实用工具，覆盖生活实用、理财计算、开发工具和文本处理四大分类。
+ToolHub (https://www.toolhub.asia) is a pure-frontend online tools website. All calculations and processing happen client-side in the user's browser -- no backend server, no database, no data collection. Every tool is accessible via a dedicated URL and supports dark mode, responsive design, and PWA installation.
 
-## 工具列表
+## Tool Categories
 
-### 生活实用
-- 年龄计算器 (#age) - 精确计算周岁、月龄、天数
-- 单位换算 (#unit) - 长度、重量、温度换算
-- BMI计算器 (#bmi) - 身体质量指数计算
+### Life & Daily Utilities
+- **Age Calculator** (age-calculator.html) - Calculate exact age in years, months, and days between two dates. Supports birthdate input with real-time results.
+- **BMI Calculator** (bmi-calculator.html) - Body Mass Index calculator with WHO standard categories (underweight/normal/overweight/obese). Supports metric and imperial units.
+- **Days Calculator** (days-calculator.html) - Calculate the number of days between two dates, including workdays and weekends breakdown.
+- **Currency Converter** (currency-converter.html) - Real-time exchange rate conversion supporting major world currencies.
+- **Unit Converter** (unit-converter.html) - Comprehensive unit conversion for length, weight, temperature, area, volume, speed, and more.
+- **File Size Converter** (file-size-converter.html) - Convert between bytes, KB, MB, GB, TB with automatic precision.
+- **Reading Speed Calculator** (reading-speed-calculator.html) - Estimate reading time for articles based on word count and reading speed.
+- **Side Income Calculator** (side-income-calculator.html) - Calculate hourly rates, project quotes, and monthly income targets for freelancers.
 
-### 理财计算
-- 房贷计算器 (#mortgage) - 等额本息/等额本金月供
-- 投资收益计算器 (#invest) - 复利/定投收益模拟
-- 副业收入计算器 (#sidejob) - 自由职业报价与时薪
-- 存款利息计算器 (#savings) - 银行存款到期收益
+### Finance & Investment
+- **Mortgage Calculator** (mortgage-calculator.html) - Compare equal principal vs. equal installment repayment methods with amortization schedule.
+- **Investment Calculator** (investment-calculator.html) - Compound interest and fixed investment return simulator with growth charts.
+- **Savings Interest Calculator** (savings-interest-calculator.html) - Calculate bank deposit maturity returns with various interest calculation methods.
 
-### 开发工具
-- 二维码生成器 (#qr) - 文本/网址转二维码
-- 密码生成器 (#password) - 生成安全随机密码
-- 时间戳转换 (#timestamp) - Unix时间戳与日期互转
-- 颜色转换 (#color) - HEX/RGB/HSL互转
-- JSON格式化 (#json) - JSON美化/压缩/校验
-- Base64编解码 (#base64) - Base64编码与解码
-- URL编解码 (#urlencoder) - URL百分号编码与解码
-- MD5哈希计算 (#md5) - MD5/SHA哈希生成
-- UUID生成器 (#uuid) - 生成UUID/GUID v4
-- 进制转换 (#baseconvert) - 二/八/十/十六进制互转
-- 正则表达式测试 (#regex) - 在线测试正则匹配
-- CSS压缩 (#cssmin) - 压缩CSS减小体积
-- HTTP状态码查询 (#httpcode) - 查询状态码含义
-- JWT解码器 (#jwt) - 解码JWT令牌Header/Payload
-- Cron表达式生成器 (#cron) - 可视化生成Cron定时表达式
-- HTML编解码 (#htmlencode) - HTML实体编码与解码
-- IP地址查询 (#ipquery) - IP地址信息与子网计算
-- JS压缩 (#jsmin) - 压缩JavaScript减小体积
-- 命名格式转换 (#caseconvert) - 驼峰/下划线/帕斯卡互转
+### Developer Tools
+- **JSON Formatter** (json-formatter.html) - Format, minify, validate, and beautify JSON data with syntax highlighting and error detection.
+- **Base64 Encoder/Decoder** (base64-encoder.html) - Encode/decode Base64 strings and files. Supports text and binary data.
+- **URL Encoder/Decoder** (url-encoder-decoder.html) - Percent-encoding and decoding for URLs, with support for Unicode characters.
+- **MD5/SHA Hash Generator** (md5-hash.html) - Generate MD5, SHA-1, SHA-256, SHA-512 hash values for text and files.
+- **UUID Generator** (uuid-generator.html) - Generate UUID/GUID v4 identifiers with bulk generation support.
+- **Base Converter** (base-converter.html) - Convert between binary, octal, decimal, hexadecimal, and custom bases up to base-36.
+- **Timestamp Converter** (timestamp-converter.html) - Convert between Unix timestamps and human-readable dates in multiple formats.
+- **JWT Decoder** (jwt-decoder.html) - Decode JWT tokens to view header and payload, with signature verification info.
+- **Regex Tester** (regex-tester.html) - Test regular expressions with real-time matching, replacement, and capture group extraction.
+- **Cron Expression Generator** (cron-expression-generator.html) - Visual cron schedule builder with human-readable descriptions.
+- **HTML Encoder/Decoder** (html-encoder-decoder.html) - Convert between HTML entities and plain text.
+- **HTTP Status Code Lookup** (http-status-code-lookup.html) - Search and reference all HTTP status codes with detailed explanations.
+- **IP Address Lookup** (ip-address-lookup.html) - IP info and subnet calculator with CIDR notation support.
+- **CSS Minifier** (css-minifier.html) - Compress CSS to reduce file size by removing whitespace and comments.
+- **JavaScript Minifier** (javascript-minifier.html) - Minify JS code with optional variable name mangling.
+- **CSV/JSON Converter** (csv-json-converter.html) - Convert between CSV and JSON formats with custom delimiter support.
+- **Naming Convention Converter** (naming-convention-converter.html) - Convert between camelCase, snake_case, PascalCase, kebab-case, and more.
+- **Short Link Generator** (short-link-generator.html) - Generate shortened URLs with optional custom aliases.
+- **Image to Base64 Converter** (image-to-base64-converter.html) - Convert image files to Base64 data URIs for embedding in CSS/HTML.
+- **SVG Preview Tool** (svg-preview-tool.html) - Live preview and edit SVG code with instant visual feedback.
 
-### 文本处理
-- 字数统计 (#wordcount) - 中英文字符、行数统计
-- 大小写转换 (#case) - 英文大小写转换
-- 文本去重 (#textdedup) - 删除重复行和空行
-- 文本对比 (#textdiff) - 逐行对比文本差异
-- 随机文本生成器 (#lorem) - 生成占位填充文本
-- 字符字节统计 (#charcount) - 统计字符数和字节数
+### Text Processing
+- **Word Count Tool** (word-count-tool.html) - Count words, characters, lines, and paragraphs in Chinese and English text.
+- **Case Converter** (case-converter.html) - Convert text between uppercase, lowercase, title case, and sentence case.
+- **Text Deduplicator** (text-deduplicator.html) - Remove duplicate lines and empty lines from text with sorting options.
+- **Text Diff Tool** (text-diff-tool.html) - Side-by-side text comparison highlighting additions, deletions, and modifications.
+- **Text Formatter** (text-formatter.html) - Clean and format text with options for line breaks, spacing, and indentation.
+- **Text Reverser** (text-reverser.html) - Reverse text, words, or lines with multiple reversal modes.
+- **List Sorter** (list-sorter.html) - Sort lists alphabetically, numerically, or by length with ascending/descending options.
+- **Lorem Ipsum Generator** (lorem-ipsum-generator.html) - Generate placeholder text with customizable length and format.
+- **Markdown Editor** (markdown-editor.html) - Live Markdown preview with syntax highlighting and export to HTML.
+- **Morse Code Translator** (morse-code-translator.html) - Convert between text and Morse code with audio playback.
+- **Char/Byte Counter** (char-byte-counter.html) - Count characters and bytes in UTF-8 encoded text.
 
-## 技术特点
+### Design & Creative
+- **Color Converter** (color-converter.html) - Convert between HEX, RGB, HSL, CMYK, and LAB color formats with color picker.
+- **Color Palette Generator** (color-palette-generator.html) - Generate harmonious color palettes from a base color using color theory.
+- **CSS Gradient Generator** (css-gradient-generator.html) - Create linear and radial CSS gradients with live preview and code export.
+- **QR Code Generator** (qr-code-generator.html) - Generate QR codes for URLs, text, WiFi, and contact info with customization options.
+- **Image Compressor** (image-compressor.html) - Compress images (JPG/PNG/WebP) client-side with quality control.
 
-- 纯前端实现，无后端依赖
-- 所有数据本地处理，不上传服务器
-- 支持暗色模式
-- 响应式设计，适配移动端
-- PWA 支持
-- 每个工具支持 hash 路由独立访问
+### Security Tools
+- **Password Generator** (password-generator.html) - Generate secure random passwords with customizable length and character sets.
+- **Password Strength Checker** (password-strength-checker.html) - Evaluate password strength with entropy calculation and improvement suggestions.
 
-## 网址
+### Calculators
+- **Scientific Calculator** (scientific-calculator.html) - Full-featured scientific calculator with trigonometric, logarithmic, and statistical functions.
+- **Percentage Calculator** (percentage-calculator.html) - Calculate percentage increase/decrease, percentage of a number, and ratio conversions.
+- **Random Number Generator** (random-number-generator.html) - Generate random numbers, passwords, and lottery numbers with range customization.
 
-- 线上地址: https://www.toolhub.asia/
-- GitHub仓库: https://github.com/qxgjz/toolhub
-- 站点地图: https://www.toolhub.asia/sitemap.xml
+## Technical Features
+
+- **Pure Frontend**: All tools run entirely in the browser using HTML5, CSS3, and vanilla JavaScript
+- **Privacy First**: Zero data collection, zero server uploads, zero tracking (except anonymous analytics)
+- **Dark Mode**: Full dark theme support with system preference detection
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **PWA Support**: Installable as a Progressive Web App for offline access
+- **Hash Routing**: Every tool accessible via unique URL (e.g., /json-formatter.html)
+- **Keyboard Shortcuts**: Common operations supported via keyboard
+- **Service Worker**: Offline caching for previously visited tools
+- **Structured Data**: Full Schema.org markup (WebApplication, SoftwareApplication, BreadcrumbList)
+
+## Use Cases
+
+When users need:
+- Quick calculations without installing apps (mortgage, investment, BMI)
+- Developer utilities during coding (JSON formatting, Base64, regex testing, timestamp conversion)
+- Text processing for writing or data cleaning (word count, deduplication, diff)
+- Design reference (color conversion, gradient generation, QR codes)
+- Security tools (password generation, hash verification)
+- Unit conversions for travel or cooking
+
+## URLs
+
+- Website: https://www.toolhub.asia/
+- Sitemap: https://www.toolhub.asia/sitemap.xml
+- GitHub: https://github.com/qxgjz/toolhub
+- Contact: https://www.toolhub.asia/contact.html
+- About: https://www.toolhub.asia/about.html
+- Blog: https://www.toolhub.asia/blog.html
+
+## Language
+
+Primary language: Chinese (Simplified)
+Secondary: English (tool names and descriptions)
