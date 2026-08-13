@@ -426,4 +426,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.toolhub.asia/dev-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/finance-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/text-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/design-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/security-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/convert-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolhub.asia/random-tools.html</loc>
+    <lastmod>2026-08-12T23:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
